@@ -1352,7 +1352,6 @@ PRODUCT_PACKAGES += \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
     libvendorscenariopoweroptfeature \
     libvideoml \
-    libvmmem \
     libvppclient \
     libvppcommon \
     libvpphcp \
