@@ -533,7 +533,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/config/waipio_vertigo_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/waipio_vertigo_lsm6dst_0.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/config/waipio_vertigo_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/waipio_vertigo_lsm6dst_1.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
-    vendor/nothing/phone2/proprietary/vendor/etc/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/nothing/phone2/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
@@ -1109,7 +1108,6 @@ PRODUCT_PACKAGES += \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
-    libdsd2pcm \
     libdsi_netctrl \
     libdsutils \
     libdualcam_optical_zoom_control \
@@ -1134,7 +1132,6 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     libgrpc++_unsecure_prebuilt \
     libhdr10plus \
-    libhdr_stub \
     libhdrdynamic \
     libhdrdynamicootf \
     libhme \
