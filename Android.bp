@@ -11132,7 +11132,8 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
+                "libbinder_ndk",
+                "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
                 "libc",
                 "libcutils",
@@ -13312,7 +13313,8 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
+                "libbinder_ndk",
+                "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
                 "libc",
                 "libcutils",
@@ -16114,38 +16116,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmdsprpc",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmdsprpc.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libhardware",
-                "libutils",
-                "vendor.qti.hardware.dsp@1.0",
-                "liblog",
-                "libc",
-                "libcutils",
-                "libdmabufheap",
-                "libvmmem",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -20213,7 +20183,8 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhardware",
                 "libutils",
-                "vendor.qti.hardware.dsp@1.0",
+                "libbinder_ndk",
+                "vendor.qti.hardware.dsp-V1-ndk",
                 "liblog",
                 "libc",
                 "libcutils",
@@ -24872,7 +24843,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.dsp@1.0",
+    name: "vendor.qti.hardware.dsp-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24880,13 +24851,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.dsp-V1-ndk.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -28660,6 +28629,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "vendor.qti.hardware.dsp-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.dsp-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.qti.hardware.limits-service.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml",
@@ -29033,13 +29011,13 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/dspservice",
             ],
             shared_libs: [
-                "libhidlbase",
                 "libhardware",
                 "libutils",
                 "libcutils",
                 "liblog",
                 "libavservices_minijail",
-                "vendor.qti.hardware.dsp@1.0",
+                "vendor.qti.hardware.dsp-V1-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
