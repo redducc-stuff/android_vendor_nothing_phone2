@@ -24,16 +24,19 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/btaudio_offload_if.so",
             ],
             shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
                 "libbase",
                 "libcutils",
                 "libfmq",
                 "libhidlbase",
                 "liblog",
                 "libutils",
-                "android.hardware.bluetooth.audio@2.0",
-                "libbluetooth_audio_session",
+                "libbinder_ndk",
+                "libbluetooth_audio_session_aidl_qti",
                 "libbluetooth_audio_session_qti",
                 "libbluetooth_audio_session_qti_2_1",
+                "vendor.qti.hardware.bluetooth.audio-V1-ndk",
+                "android.hardware.bluetooth.audio-impl-qti",
                 "libc++",
                 "libc",
                 "libm",
@@ -8508,6 +8511,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio-impl-qti",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so",
+            ],
+            shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libbluetooth_audio_session_aidl_qti",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "android.hardware.bluetooth@1.0-impl-qti",
     owner: "nothing",
     strip: {
@@ -8525,11 +8560,55 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libdiag",
+                "libqmiservices",
                 "libqmi_cci",
                 "libbtnv",
                 "android.hardware.bluetooth@1.0",
                 "libsoc_helper",
+                "libssl",
+                "mbedtls_qti",
+                "libcrypto",
+                "libbinder_ndk",
+                "android.hardware.thermal@2.0",
+                "android.hardware.thermal-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth@aidl-impl-qti",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/android.hardware.bluetooth@aidl-impl-qti.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libdiag",
                 "libqmiservices",
+                "libqmi_cci",
+                "libbtnv",
+                "android.hardware.bluetooth-V1-ndk",
+                "android.hardware.bluetooth@1.0-impl-qti",
+                "libsoc_helper",
                 "libc++",
                 "libc",
                 "libm",
@@ -8637,39 +8716,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.dsi.ant@1.0-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "com.dsi.ant@1.0",
-                "android.hardware.bluetooth@1.0",
-                "android.hardware.bluetooth@1.0-impl-qti",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.qti.chi.override",
     owner: "nothing",
     strip: {
@@ -8750,6 +8796,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "mbedtls_qti",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/mbedtls_qti.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libc",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.esepowermanager@1.1-impl",
     owner: "nothing",
     strip: {
@@ -8783,7 +8859,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_audio@2.0-impl",
+    name: "vendor.qti.hardware.bluetooth_sar@aidl-impl",
     owner: "nothing",
     strip: {
         none: true,
@@ -8791,77 +8867,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so",
-            ],
-            shared_libs: [
-                "android.hardware.audio.common@5.0",
-                "vendor.qti.hardware.bluetooth_audio@2.0",
-                "libbase",
-                "libbluetooth_audio_session_qti",
-                "libcutils",
-                "libfmq",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_audio@2.1-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so",
-            ],
-            shared_libs: [
-                "android.hardware.audio.common@5.0",
-                "libbluetooth_audio_session_qti_2_1",
-                "libbase",
-                "libcutils",
-                "libfmq",
-                "libhidlbase",
-                "libhidltransport",
-                "liblog",
-                "libutils",
-                "vendor.qti.hardware.bluetooth_audio@2.1",
-                "vendor.qti.hardware.bluetooth_audio@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_sar@1.1-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@aidl-impl.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -8869,8 +8875,9 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbase",
                 "libcutils",
-                "vendor.qti.hardware.bluetooth_sar@1.0",
-                "vendor.qti.hardware.bluetooth_sar@1.1",
+                "libhardware",
+                "libbinder_ndk",
+                "vendor.qti.hardware.bluetooth_sar-V1-ndk",
                 "android.hardware.bluetooth@1.0-impl-qti",
                 "libc++",
                 "libc",
@@ -8886,7 +8893,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.btconfigstore@1.0-impl",
+    name: "vendor.qti.hardware.bttpi-impl",
     owner: "nothing",
     strip: {
         none: true,
@@ -8894,48 +8901,19 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "liblog",
                 "libbase",
                 "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "vendor.qti.hardware.btconfigstore@1.0",
+                "libhardware",
+                "libbinder_ndk",
+                "android.hardware.bluetooth@1.0",
                 "android.hardware.bluetooth@1.0-impl-qti",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.btconfigstore@2.0-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "vendor.qti.hardware.btconfigstore@2.0",
-                "android.hardware.bluetooth@1.0-impl-qti",
+                "vendor.qti.hardware.bttpi-V3-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -9026,7 +9004,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.fm@1.0-impl",
+    name: "vendor.qti.hardware.fm-impl",
     owner: "nothing",
     strip: {
         none: true,
@@ -9034,19 +9012,21 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.fm-impl.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libutils",
+                "liblog",
                 "libbase",
                 "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "vendor.qti.hardware.fm@1.0",
+                "libhardware",
+                "libbinder_ndk",
                 "android.hardware.bluetooth@1.0-impl-qti",
+                "vendor.qti.hardware.fm-V1-ndk",
                 "libqmi_cci",
-                "libqmiservices",
                 "libqmi",
+                "libqmiservices",
                 "libc++",
                 "libc",
                 "libm",
@@ -11727,6 +11707,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libbluetooth_audio_session_aidl_qti",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libbluetooth_audio_session_aidl_qti.so",
+            ],
+            shared_libs: [
+                "android.hardware.bluetooth.audio-V4-ndk",
+                "android.hardware.bluetooth.audio@2.0",
+                "android.hardware.bluetooth.audio@2.1",
+                "libbase",
+                "libcutils",
+                "libbinder_ndk",
+                "libfmq",
+                "liblog",
+                "libhidlbase",
+                "libxml2",
+                "libflatbuffers-cpp",
+                "server_configurable_flags",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libbluetooth_audio_session_qti",
     owner: "nothing",
     strip: {
@@ -11780,36 +11796,6 @@ cc_prebuilt_library_shared {
                 "libhidltransport",
                 "liblog",
                 "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libbt-hidlclient",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libbt-hidlclient.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libhidlbase",
-                "android.hardware.bluetooth@1.0",
-                "com.dsi.ant@1.0",
-                "vendor.qti.hardware.fm@1.0",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -21279,33 +21265,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsoc_helper_jni",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsoc_helper_jni.so",
-            ],
-            shared_libs: [
-                "libsoc_helper",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libspcom",
     owner: "nothing",
     strip: {
@@ -24242,7 +24201,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_sar@1.0",
+    name: "vendor.qti.hardware.bluetooth_sar-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24250,13 +24209,10 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar-V1-ndk.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24270,7 +24226,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.bluetooth_sar@1.1",
+    name: "vendor.qti.hardware.bttpi-V3-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24278,14 +24234,10 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so",
             ],
             shared_libs: [
-                "vendor.qti.hardware.bluetooth_sar@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -28789,6 +28741,33 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "bluetooth_hci.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/bluetooth_hci.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "bluetooth_sar.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/bluetooth_sar.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "bttpi-saidl.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/bttpi-saidl.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "c2_manifest_vendor.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/c2_manifest_vendor.xml",
@@ -29329,27 +29308,35 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.bluetooth@1.0-service-qti",
+    name: "android.hardware.bluetooth@aidl-service-qti",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti",
+                "proprietary/vendor/bin/hw/android.hardware.bluetooth@aidl-service-qti",
             ],
             shared_libs: [
+                "libbase",
                 "liblog",
                 "libcutils",
                 "libutils",
                 "libhidlbase",
-                "android.hardware.bluetooth@1.0",
+                "libbinder_ndk",
+                "android.hardware.bluetooth-V1-ndk",
+                "android.hardware.bluetooth@1.0-impl-qti",
+                "vendor.qti.hardware.fm-V1-ndk",
+                "vendor.qti.hardware.fm-impl",
+                "android.hardware.bluetooth@aidl-impl-qti",
+                "vendor.qti.hardware.bttpi-V3-ndk",
+                "libqmi_cci",
+                "libqmi",
+                "libqmiservices",
                 "libsoc_helper",
                 "vendor.qti.hardware.fm@1.0",
-                "com.dsi.ant@1.0",
-                "vendor.qti.hardware.bluetooth_sar@1.0",
-                "vendor.qti.hardware.bluetooth_sar@1.1",
-                "vendor.qti.hardware.btconfigstore@1.0",
-                "vendor.qti.hardware.btconfigstore@2.0",
+                "vendor.qti.hardware.bttpi-impl",
                 "libqti_vndfwk_detect_vendor",
+                "vendor.qti.hardware.bluetooth_sar@aidl-impl",
+                "vendor.qti.hardware.bluetooth_sar-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
