@@ -1076,7 +1076,6 @@ PRODUCT_PACKAGES += \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
-    liblistensoundmodel2vendor \
     libloadalgo_stub \
     libloc_api_v02 \
     libloc_api_wds \
