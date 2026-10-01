@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "vendor/qcom/common/vendor/display",
+        "vendor/qcom/common/vendor/perf",
         "vendor/qcom/common/vendor/qseecomd",
         "vendor/qcom/common/vendor/wlan",
     ],
