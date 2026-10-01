@@ -4,6 +4,7 @@
 
 soong_namespace {
     imports: [
+        "device/nothing/phone2",
         "vendor/qcom/common/vendor/display",
         "vendor/qcom/common/vendor/perf",
         "vendor/qcom/common/vendor/qseecomd",
@@ -23702,6 +23703,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.noth.hardware.camera-service-impl.so",
             ],
             shared_libs: [
+                "libntcam_shim",
                 "libui_shim",
                 "libc++",
                 "libcutils",
