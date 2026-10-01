@@ -20395,37 +20395,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libshsusr_verinfo",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libshsusr_verinfo.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_client_qmux",
-                "libqmi_client_helper",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsi",
     owner: "nothing",
     strip: {
@@ -30927,18 +30896,16 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/shsusrd",
             ],
             shared_libs: [
+                "libutils",
+                "libcutils",
+                "libshsc",
+                "libconfigdb",
                 "libcrypto",
+                "libdsutils",
+                "liblog",
                 "libssl",
-                "libqmiservices",
                 "libqmi_cci",
                 "libqmi_common_so",
-                "libqmi_client_qmux",
-                "libqmi_client_helper",
-                "libdsutils",
-                "libconfigdb",
-                "libcutils",
-                "libnlnetmgr",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",

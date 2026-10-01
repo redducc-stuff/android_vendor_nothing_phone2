@@ -1318,7 +1318,6 @@ PRODUCT_PACKAGES += \
     libsensorslog \
     libsfeShiftExtrapolation \
     libshsc \
-    libshsusr_verinfo \
     libsi \
     libslimclient \
     libsmemlog \

@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -16,11 +16,11 @@ on post-fs-data
     mkdir /data/vendor/shsusr 0770 radio radio
     chmod 0770 /data/vendor/shsusr
 
-service vendor.shsusrd /system/vendor/bin/shsusrd 0x22819000
+service vendor.shsusrd /system/vendor/bin/shsusrd 0x22819000 0x0A
     class main
     user radio
     group radio
-    capabilities NET_ADMIN
+    capabilities NET_ADMIN NET_RAW
     disabled
 
 on property:persist.vendor.data.shsusr_load=1
