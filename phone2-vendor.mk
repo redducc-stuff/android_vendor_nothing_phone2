@@ -8,12 +8,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/odm/etc/aac_richtap.config:$(TARGET_COPY_OUT_ODM)/etc/aac_richtap.config \
     vendor/nothing/phone2/proprietary/system/etc/permissions/com.nxp.nfc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.nxp.nfc.xml \
-    vendor/nothing/phone2/proprietary/system/etc/sysconfig/preinstalled-packages-audioeffect.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/preinstalled-packages-audioeffect.xml \
     vendor/nothing/phone2/proprietary/system_ext/etc/permissions/advancedSample_camera_extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/advancedSample_camera_extensions.xml \
     vendor/nothing/phone2/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/nothing/phone2/proprietary/system_ext/etc/permissions/com.nothing.feature.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.nothing.feature.xml \
     vendor/nothing/phone2/proprietary/system_ext/etc/permissions/com.nothing.feature_qcom.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.nothing.feature_qcom.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/nothing/phone2/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd \
     vendor/nothing/phone2/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd \
@@ -23,8 +21,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/acdbdata/waipio_qrd/QRD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_qrd/QRD_acdb_cal.acdb \
     vendor/nothing/phone2/proprietary/vendor/etc/acdbdata/waipio_qrd/QRD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_qrd/QRD_workspaceFileXml.qwsp \
     vendor/nothing/phone2/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_effects.conf \
-    vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_policy_volumes.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/default_volume_tables.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/mixer_paths_waipio_cdp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_cdp.xml \
@@ -37,10 +33,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape_qssi/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape_qssi/audio_policy_volumes.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio/sku_cape_qssi/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape_qssi/default_volume_tables.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/camera/CFR_para4_Nothing_M_v100-8_AI.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CFR_para4_Nothing_M_v100-8_AI.bin \
     vendor/nothing/phone2/proprietary/vendor/etc/camera/CFR_para4_Nothing_UW_v101-5_AI.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CFR_para4_Nothing_UW_v101-5_AI.bin \
     vendor/nothing/phone2/proprietary/vendor/etc/camera/Ndot-55.otf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/Ndot-55.otf \
@@ -195,7 +188,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/dirac/dirac_resource.dar:$(TARGET_COPY_OUT_VENDOR)/etc/dirac/dirac_resource.dar \
     vendor/nothing/phone2/proprietary/vendor/etc/display/qdcm_calib_data_nt37705_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_nt37705_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.json \
     vendor/nothing/phone2/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
     vendor/nothing/phone2/proprietary/vendor/etc/eva/facedetection/model3.dat:$(TARGET_COPY_OUT_VENDOR)/etc/eva/facedetection/model3.dat \
@@ -241,12 +233,10 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.noth.hardware.camera-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.noth.hardware.camera-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.audio-adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.audio-adsprpc-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider@2.7-service_64.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.1-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.eid@1.0-service.rc \
@@ -268,47 +258,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     vendor/nothing/phone2/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     vendor/nothing/phone2/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Calibration360.dat \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVACFS_Configuration.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Calibration360.dat \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVACFS_Configuration.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/4mic/audiozoom_2.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVACFS_Configuration.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Calibration360.dat \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVACFS_Configuration.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVACFS_Configuration.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID13_MIC_Cam_front.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID1_MIC_HDR_standard.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID2_MIC_HDR_voicefocus.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID3_MIC_HDR_wideband.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam_back.txt \
-    vendor/nothing/phone2/proprietary/vendor/etc/lvacfs_params/4mic/audiozoom_4.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lvacfs_params/4mic/audiozoom_4.txt \
     vendor/nothing/phone2/proprietary/vendor/etc/media_cape/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_cape/video_system_specs.json \
     vendor/nothing/phone2/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
@@ -320,10 +269,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/media_profiles_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cape.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
-    vendor/nothing/phone2/proprietary/vendor/etc/models/acd/music.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/music.eai \
-    vendor/nothing/phone2/proprietary/vendor/etc/models/acd/speech.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/speech.eai \
     vendor/nothing/phone2/proprietary/vendor/etc/permissions/com.nothing.features_vnd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nothing.features_vnd.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/permissions/com.nxp.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.nfc.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
@@ -536,7 +481,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/nothing/phone2/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
@@ -951,12 +895,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     audio.bluetooth_qti.default \
-    audio.primary.taro_phone2 \
     camera.qcom \
     com.dsi.ant@1.0-impl \
     com.qti.chi.override \
     fingerprint.default \
-    sound_trigger.primary.taro \
     vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
@@ -1008,24 +950,12 @@ PRODUCT_PACKAGES += \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle \
-    lib_lvacfs \
     libaacvibrator \
-    libadm \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
-    libagm_compress_plugin \
-    libagm_mixer_plugin \
-    libagm_pcm_plugin \
-    libagmclient \
-    libagmmixer \
     libaidenoiser \
     libaidenoiserv2 \
     libalCFR \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
-    libar-pal \
     libarcsoft_ai_moon \
     libarcsoft_aiscenedetection \
     libarcsoft_base_utils \
@@ -1055,9 +985,6 @@ PRODUCT_PACKAGES += \
     libarcsoft_tfp_grf \
     libarcsoft_turbo_fusion_raw_portrait_super_night \
     libarcsoft_turbo_fusion_raw_super_night \
-    libats \
-    libaudio_log_utils \
-    libbatterylistener \
     libbitmlengine \
     libbitmlenginev2 \
     libbluetooth_audio_session_qti \
@@ -1103,7 +1030,6 @@ PRODUCT_PACKAGES += \
     libdepthcomputation \
     libdiag \
     libdiagjni \
-    libdirac \
     libdlrmsc \
     libdpmqmihal \
     libdrmfs \
@@ -1124,7 +1050,6 @@ PRODUCT_PACKAGES += \
     libface3d_dev \
     libfastcvdsp_stub \
     libfastcvopt \
-    libfmpal \
     libgarden \
     libgarden_haltests_e2e \
     libgdtap \
@@ -1169,11 +1094,7 @@ PRODUCT_PACKAGES += \
     liblowi_common \
     liblowi_wifihal \
     liblqe \
-    liblvacfs_wrapper \
-    liblx-ar_util \
-    liblx-osal \
     libmasc \
-    libmcs \
     libmctfengine_stub \
     libmdmdetect \
     libmdmimgload \
@@ -1236,7 +1157,6 @@ PRODUCT_PACKAGES += \
     libops \
     libos \
     libpal_net_if \
-    libpalclient \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
@@ -1286,7 +1206,6 @@ PRODUCT_PACKAGES += \
     libqrtr \
     libqshcamera \
     libqsocket \
-    libqtigefar \
     libqtiidentitycredential \
     libqtikeymaster4 \
     libqtikeymint \
@@ -1317,7 +1236,6 @@ PRODUCT_PACKAGES += \
     libsi \
     libslimclient \
     libsmemlog \
-    libsndcardparser \
     libsns_api \
     libsns_device_mode_stub \
     libsns_direct_channel_stub \
@@ -1399,14 +1317,6 @@ PRODUCT_PACKAGES += \
     qtiwakelock \
     se_extn_client \
     sensors.ssc \
-    libasphere \
-    libdiraceffect_NT \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libreverbwrapper \
-    libshoebox \
-    libvolumelistener \
     vendor.aac.hardware.richtap.vibrator-V1-ndk_platform \
     vendor.libdpmctmgr \
     vendor.libdpmfdmgr \
@@ -1429,9 +1339,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk_platform \
     vendor.qti.gnss-V5-ndk_platform \
     vendor.qti.gnss-service \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
-    vendor.qti.hardware.ListenSoundModel@1.0-impl \
-    vendor.qti.hardware.ListenSoundModel@1.0_vendor \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
     vendor.qti.hardware.cacert@1.0 \
@@ -1467,7 +1374,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.limits@1.0_vendor \
     vendor.qti.hardware.limits@1.1_vendor \
     vendor.qti.hardware.mwqemadapter@1.0_vendor \
-    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.power.powermodule@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
@@ -1640,7 +1546,6 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libvpp_vqa_networks_so \
     vendor_lib_rfsa_adsp_libvpt_action_recognition_so \
     libencoderjpeg_jni \
-    NothingAudioEffectService \
     CACertService \
     CneApp \
     IWlanService \
@@ -1670,9 +1575,6 @@ PRODUCT_PACKAGES += \
     ATFWD-daemon \
     adpl \
     adsprpcd \
-    agmcap \
-    agmcompressplay \
-    agmplay \
     cdsprpcd \
     cnd \
     diag-router \
@@ -1694,7 +1596,6 @@ PRODUCT_PACKAGES += \
     vendor.noth.hardware.camera-service \
     vendor.qti.camera.provider@2.7-service_64 \
     vendor.qti.esepowermanager@1.1-service \
-    vendor.qti.hardware.AGMIPC@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.eid@1.0-service \
     vendor.qti.hardware.factory@1.0-service \
