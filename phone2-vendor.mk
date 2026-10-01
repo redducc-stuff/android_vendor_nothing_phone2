@@ -894,7 +894,6 @@ PRODUCT_PACKAGES += \
     ftm_fm_lib \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
-    audio.bluetooth_qti.default \
     camera.qcom \
     com.dsi.ant@1.0-impl \
     com.qti.chi.override \
@@ -947,9 +946,6 @@ PRODUCT_PACKAGES += \
     libTrustedUI \
     libTrustedUITZ \
     libTrustedUIVM \
-    lib_bt_aptx \
-    lib_bt_ble \
-    lib_bt_bundle \
     libaacvibrator \
     libadsp_default_listener \
     libadsprpc \
