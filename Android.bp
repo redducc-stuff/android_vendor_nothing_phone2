@@ -8807,52 +8807,13 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbase",
-                "libhidlbase",
-                "libhidlmemory",
                 "libutils",
                 "libcutils",
                 "liblog",
-                "vendor.qti.hardware.qseecom@1.0",
-                "libQSEEComAPI",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qteeconnector@1.0-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "vendor.qti.hardware.qteeconnector@1.0",
-                "libQSEEComAPI",
-                "libGPreqcancel_svc",
-                "libxml2",
-                "libminkdescriptor",
-                "libqcbor",
                 "libdmabufheap",
-                "libion",
+                "vendor.qti.hardware.qseecom-V1-ndk",
+                "libbinder_ndk",
+                "libQSEEComAPI",
                 "libc++",
                 "libc",
                 "libm",
@@ -9645,64 +9606,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libGPQTEEC_vendor",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libGPQTEEC_vendor.so",
-            ],
-            shared_libs: [
-                "libc",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libGPTEE_vendor",
-                "libQTEEConnector_vendor",
-                "vendor.qti.hardware.qteeconnector@1.0",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libGPTEE_vendor",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libGPTEE_vendor.so",
-            ],
-            shared_libs: [
-                "libc",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libGPreqcancel",
     owner: "nothing",
     strip: {
@@ -9856,67 +9759,6 @@ cc_prebuilt_library_shared {
                 "libion",
                 "libdmabufheap",
                 "libc++",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libQTEEConnector_listener",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libQTEEConnector_listener.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libQSEEComAPI",
-                "libxml2",
-                "libbinder",
-                "libcrypto",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libQTEEConnector_vendor",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libQTEEConnector_vendor.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "vendor.qti.hardware.qteeconnector@1.0",
-                "libc++",
-                "libc",
                 "libm",
                 "libdl",
             ],
@@ -15107,6 +14949,36 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libqcbor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libminkipcbinder_vendor",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libminkipcbinder_vendor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbinder_ndk",
+                "vendor.qti.hardware.minkipcbinder-V1-ndk_vendor",
+                "libbinder",
                 "libc++",
                 "libc",
                 "libm",
@@ -24415,6 +24287,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.minkipcbinder-V1-ndk_vendor",
+    stem: "vendor.qti.hardware.minkipcbinder-V1-ndk",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.minkipcbinder-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor",
     stem: "vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk",
     owner: "nothing",
@@ -24615,7 +24514,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qseecom@1.0",
+    name: "vendor.qti.hardware.qseecom-V1-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -24623,41 +24522,11 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.qseecom@1.0.so",
+                "proprietary/vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so",
             ],
             shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qteeconnector@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -28070,6 +27939,24 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "vendor.qti.hardware.minkipcbinder-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.minkipcbinder-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "vendor.qti.hardware.qseecom@1.0-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.qseecom@1.0-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.qti.hardware.radio.am.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml",
@@ -28985,19 +28872,21 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.qseecom@1.0-service",
+    name: "vendor.qti.hardware.minkipcbinder@1.0-service",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service",
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.minkipcbinder@1.0-service",
             ],
             shared_libs: [
-                "libbase",
-                "libhidlbase",
-                "libutils",
+                "libminkipcbinder_vendor",
+                "libminksocket_vendor",
                 "liblog",
-                "vendor.qti.hardware.qseecom@1.0",
+                "libcutils",
+                "libqcbor",
+                "libbinder_ndk",
+                "libjsoncpp",
                 "libc++",
                 "libc",
                 "libm",
@@ -29015,18 +28904,22 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.qteeconnector@1.0-service",
+    name: "vendor.qti.hardware.qseecom@1.0-service",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service",
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service",
             ],
             shared_libs: [
-                "libhidlbase",
-                "libutils",
                 "liblog",
-                "vendor.qti.hardware.qteeconnector@1.0",
+                "libbase",
+                "libutils",
+                "libbinder_ndk",
+                "libdmabufheap",
+                "libQSEEComAPI",
+                "vendor.qti.hardware.qseecom-V1-ndk",
+                "vendor.qti.hardware.qseecom@1.0-impl",
                 "libc++",
                 "libc",
                 "libm",

@@ -241,8 +241,8 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.factory@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.limits-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.limits-service.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
@@ -903,7 +903,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm-impl \
     vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
-    vendor.qti.hardware.qteeconnector@1.0-impl \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
     vendor.qti.hardware.wifidisplaysession@1.0-impl \
     vibrator.default \
@@ -928,16 +927,12 @@ PRODUCT_PACKAGES += \
     libFace3D_hlos \
     libFileMux_proprietary \
     libFlacSwDec \
-    libGPQTEEC_vendor \
-    libGPTEE_vendor \
     libGPreqcancel \
     libGPreqcancel_svc \
     libOpenCL \
     libOpenCL_adreno \
     libQ6MSFR_manager_stub \
     libQSEEComAPI \
-    libQTEEConnector_listener \
-    libQTEEConnector_vendor \
     libQcelp13SwCodec \
     libQnnHtp \
     libQnnHtpV69Stub \
@@ -1113,6 +1108,7 @@ PRODUCT_PACKAGES += \
     libmfGhostDetection \
     libmfec \
     libminkdescriptor \
+    libminkipcbinder_vendor \
     libminksocket_vendor \
     libmmcamera_bestats \
     libmmcamera_cac \
@@ -1418,6 +1414,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.factory@1.1 \
     vendor.qti.hardware.limits@1.0_vendor \
     vendor.qti.hardware.limits@1.1_vendor \
+    vendor.qti.hardware.minkipcbinder-V1-ndk_vendor \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
@@ -1425,8 +1422,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
     vendor.qti.hardware.qccvndhal@1.0_vendor \
     vendor.qti.hardware.qdutils_disp@1.0 \
-    vendor.qti.hardware.qseecom@1.0 \
-    vendor.qti.hardware.qteeconnector@1.0 \
+    vendor.qti.hardware.qseecom-V1-ndk \
     vendor.qti.hardware.radio.am-V1-ndk \
     vendor.qti.hardware.radio.am@1.0_vendor \
     vendor.qti.hardware.radio.atcmdfwd@1.0_vendor \
@@ -1636,6 +1632,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp-service.xml \
     vendor.qti.hardware.embmssl.xml \
     vendor.qti.hardware.limits-service.xml \
+    vendor.qti.hardware.minkipcbinder-service.xml \
+    vendor.qti.hardware.qseecom@1.0-service.xml \
     vendor.qti.hardware.radio.am.xml \
     vendor.qti.hardware.radio.ims.xml \
     vendor.qti.hardware.radio.lpa.xml \
@@ -1671,8 +1669,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.factory@1.0-service \
     vendor.qti.hardware.limits@1.1-service \
+    vendor.qti.hardware.minkipcbinder@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
-    vendor.qti.hardware.qteeconnector@1.0-service \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
     vendor.qti.hardware.vibrator.service \
     vendor.qti.media.c2@1.0-service \
