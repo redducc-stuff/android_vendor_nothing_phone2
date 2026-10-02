@@ -209,7 +209,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.Pong.se.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.Pong.se.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.embmssl_server.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.embmssl_server.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.ntf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ntf.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/init.qccvendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qccvendor.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
@@ -234,7 +234,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider-service_64.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.1-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
@@ -490,6 +489,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
+    vendor/nothing/phone2/proprietary/vendor/etc/sysconfig/cacert-oem-defined-uids.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/cacert-oem-defined-uids.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
@@ -895,15 +895,12 @@ PRODUCT_PACKAGES += \
     fingerprint.default \
     libqtigatekeeper \
     mbedtls_qti \
-    vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.bluetooth_sar@aidl-impl \
     vendor.qti.hardware.bttpi-impl \
     vendor.qti.hardware.capabilityconfigstore-impl \
     vendor.qti.hardware.fm-impl \
-    vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.sensorscalibrate@1.0-impl \
-    vendor.qti.hardware.wifidisplaysession@1.0-impl \
     vibrator.default \
     vulkan.adreno \
     lib-imscommon \
@@ -1041,8 +1038,6 @@ PRODUCT_PACKAGES += \
     libeepromcutter \
     libembmsservice \
     libengineplugin \
-    libesepmconfig \
-    libesesbprovision \
     libeva \
     libeva_util \
     libface3d_dev \
@@ -1054,7 +1049,6 @@ PRODUCT_PACKAGES += \
     libgf_hal \
     libgnsspps \
     libgpudataproducer \
-    libgrpc++_unsecure_prebuilt \
     libgsl \
     libhdr10plus \
     libhdr_stub \
@@ -1177,6 +1171,7 @@ PRODUCT_PACKAGES += \
     libqc2filter \
     libqcbor \
     libqcc_file_agent \
+    libqcc_sdk \
     libqcmaputils \
     libqcodec2_base \
     libqcodec2_basecodec \
@@ -1207,7 +1202,6 @@ PRODUCT_PACKAGES += \
     libqdcm-json-mode-parser \
     libqdcm-mode-parser \
     libqdi \
-    libqdma_file_agent \
     libqdpr \
     libqesdk \
     libqesdk2_0 \
@@ -1372,16 +1366,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.mwqem@1.0_vendor \
     vendor.qti.data.mwqemaidlservice-V1-ndk_vendor \
     vendor.qti.data.slm@1.0_vendor \
-    vendor.qti.diaghal@1.0_vendor \
-    vendor.qti.esepowermanager@1.0 \
-    vendor.qti.esepowermanager@1.1 \
+    vendor.qti.diaghal-V1-ndk_vendor \
     vendor.qti.gnss-V3-ndk_platform \
     vendor.qti.gnss-V5-ndk_platform \
     vendor.qti.gnss-service \
     vendor.qti.hardware.ListenSoundModelAidl-V1-ndk \
     vendor.qti.hardware.bluetooth_sar-V1-ndk \
     vendor.qti.hardware.bttpi-V3-ndk \
-    vendor.qti.hardware.cacert@1.0 \
+    vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-nothing \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
@@ -1416,10 +1408,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.minkipcbinder-V1-ndk_vendor \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule@1.0 \
-    vendor.qti.hardware.qccsyshal@1.0_vendor \
-    vendor.qti.hardware.qccsyshal@1.1_vendor \
-    vendor.qti.hardware.qccvndhal@1.0-halimpl \
-    vendor.qti.hardware.qccvndhal@1.0_vendor \
     vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom-V1-ndk \
     vendor.qti.hardware.radio.am-V1-ndk \
@@ -1466,7 +1454,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_server@1.0_vendor \
     vendor.qti.hardware.sensorscalibrate@1.0 \
     vendor.qti.hardware.vibrator.impl \
-    vendor.qti.hardware.wifidisplaysession@1.0_vendor \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     vendor.qti.ims.callcapability@1.0_vendor \
     vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor \
@@ -1487,6 +1475,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.2_vendor \
     vendor.qti.latencyaidlservice-V1-ndk_vendor \
     vendor.qti.memory.pasrmanager-V1-ndk \
+    vendor.qti.qccsyshal_aidl-V1-ndk_vendor \
+    vendor.qti.qccvndhal_aidl-V1-ndk_vendor \
+    vendor.qti.qccvndhal_aidl-halimpl \
     vendor.qti.qesdhal@1.0 \
     vendor.qti.qesdhal@1.1-impl \
     vendor.qti.qesdhal@1.1 \
@@ -1600,7 +1591,6 @@ PRODUCT_PACKAGES += \
     ImsRtpService-aidl.xml \
     android.hardware.drm-service.xml \
     android.hardware.gnss-aidl-service-qti.xml \
-    android.hardware.gnss@2.1-service-qti.xml \
     android.hardware.radio.config.xml \
     android.hardware.radio.data.xml \
     android.hardware.radio.messaging.xml \
@@ -1615,6 +1605,7 @@ PRODUCT_PACKAGES += \
     bttpi-saidl.xml \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
+    cacert-saidl.xml \
     datafactoryservice-saidl.xml \
     dpm-saidl.xml \
     imsdcservice-saidl.xml \
@@ -1642,9 +1633,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client.xml \
     vendor.qti.hardware.radio.uim_remote_server.xml \
     vendor.qti.hardware.vibrator.service.xml \
+    vendor.qti.hardware.wifidisplaysession-service.xml \
     vendor.qti.ims.factoryaidlservice.xml \
     vendor.qti.ims.imscmaidlservice.xml \
     vendor.qti.ims.uceaidlservice.xml \
+    vendor.qti.qccvndhal_aidl-service.xml \
     adpl \
     adsprpcd \
     cdsprpcd \
@@ -1663,7 +1656,6 @@ PRODUCT_PACKAGES += \
     qcrilNrd \
     vendor.noth.hardware.camera-service \
     vendor.qti.camera.provider-service_64 \
-    vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.capabilityconfigstore-service \
     vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.factory@1.0-service \
@@ -1693,7 +1685,7 @@ PRODUCT_PACKAGES += \
     pm-service \
     port-bridge \
     ppd \
-    qcc-trd \
+    qcc-vendor \
     qdcmss \
     qmipriod \
     qms \
