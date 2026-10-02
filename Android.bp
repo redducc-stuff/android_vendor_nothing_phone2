@@ -23778,67 +23778,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.limits@1.0_vendor",
-    stem: "vendor.qti.hardware.limits@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.limits@1.0.so",
-            ],
-            shared_libs: [
-                "android.hardware.thermal@1.0",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.limits@1.1_vendor",
-    stem: "vendor.qti.hardware.limits@1.1",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.limits@1.1.so",
-            ],
-            shared_libs: [
-                "android.hardware.thermal@1.0",
-                "vendor.qti.hardware.limits@1.0_vendor",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.minkipcbinder-V1-ndk_vendor",
     stem: "vendor.qti.hardware.minkipcbinder-V1-ndk",
     owner: "nothing",
@@ -27422,15 +27361,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "vendor.qti.hardware.limits-service.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.limits-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "vendor.qti.hardware.minkipcbinder-service.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.minkipcbinder-service.xml",
@@ -28227,40 +28157,6 @@ cc_prebuilt_binary {
                 "libbinder",
                 "vendor.qti.hardware.factory@1.0",
                 "vendor.qti.hardware.factory@1.1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.hardware.limits@1.1-service",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.limits@1.1-service",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libnl",
-                "android.hardware.thermal@2.0",
-                "vendor.qti.hardware.limits@1.0_vendor",
-                "vendor.qti.hardware.limits@1.1_vendor",
                 "libc++",
                 "libc",
                 "libm",

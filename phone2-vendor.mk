@@ -238,7 +238,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.factory@1.0-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.limits-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.limits-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
@@ -1394,8 +1393,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.embmsslaidl-V2-ndk_vendor \
     vendor.qti.hardware.factory@1.0 \
     vendor.qti.hardware.factory@1.1 \
-    vendor.qti.hardware.limits@1.0_vendor \
-    vendor.qti.hardware.limits@1.1_vendor \
     vendor.qti.hardware.minkipcbinder-V1-ndk_vendor \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule@1.0 \
@@ -1611,7 +1608,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore-service.xml \
     vendor.qti.hardware.dsp-service.xml \
     vendor.qti.hardware.embmssl.xml \
-    vendor.qti.hardware.limits-service.xml \
     vendor.qti.hardware.minkipcbinder-service.xml \
     vendor.qti.hardware.qseecom@1.0-service.xml \
     vendor.qti.hardware.radio.am.xml \
@@ -1647,7 +1643,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore-service \
     vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.factory@1.0-service \
-    vendor.qti.hardware.limits@1.1-service \
     vendor.qti.hardware.minkipcbinder@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.vibrator.service \
