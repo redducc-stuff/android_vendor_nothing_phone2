@@ -15727,6 +15727,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libntcamextened.so",
             ],
             shared_libs: [
+                "libcamhidl_shim",
                 "libc++",
                 "libcutils",
                 "liblog",
