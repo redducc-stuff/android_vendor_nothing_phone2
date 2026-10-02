@@ -19445,41 +19445,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqtikeymaster4",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqtikeymaster4.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcrypto",
-                "libhidlbase",
-                "libutils",
-                "libcutils",
-                "libkeymasterdeviceutils",
-                "libkeymasterutils",
-                "libbase",
-                "libqcbor",
-                "android.hardware.keymaster@4.0",
-                "android.hardware.keymaster@4.1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqtikeymint",
     owner: "nothing",
     strip: {
@@ -29239,41 +29204,6 @@ cc_prebuilt_binary {
                 "libqtiidentitycredential",
                 "android.hardware.identity-V3-ndk",
                 "android.hardware.keymaster-V3-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.keymaster@4.1-service-qti",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware",
-                "libhidlbase",
-                "android.hardware.keymaster@4.0",
-                "android.hardware.keymaster@4.1",
-                "libqtikeymaster4",
-                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
