@@ -15678,7 +15678,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libntcamera2ndk_vendor_v1",
+    name: "libntcamera2ndk_vendor_v3",
     owner: "nothing",
     strip: {
         none: true,
@@ -15686,9 +15686,10 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libntcamera2ndk_vendor_v1.so",
+                "proprietary/vendor/lib64/libntcamera2ndk_vendor_v3.so",
             ],
             shared_libs: [
+                "libbinder_ndk",
                 "libfmq",
                 "libhidlbase",
                 "libhardware",
@@ -15699,12 +15700,9 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libcamera_metadata",
                 "libmediandk",
-                "android.frameworks.cameraservice.device@2.0",
-                "android.frameworks.cameraservice.device@2.1",
-                "android.frameworks.cameraservice.common@2.0",
-                "android.frameworks.cameraservice.service@2.0",
-                "android.frameworks.cameraservice.service@2.1",
-                "android.frameworks.cameraservice.service@2.2",
+                "android.frameworks.cameraservice.common-V1-ndk",
+                "android.frameworks.cameraservice.device-V2-ndk",
+                "android.frameworks.cameraservice.service-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -15741,7 +15739,7 @@ cc_prebuilt_library_shared {
                 "libprotobuf-cpp-full-3.9.1-vendorcompat",
                 "libntcampipepb",
                 "libhardware_legacy",
-                "libntcamera2ndk_vendor_v1",
+                "libntcamera2ndk_vendor_v3",
                 "libc",
                 "libm",
                 "libdl",

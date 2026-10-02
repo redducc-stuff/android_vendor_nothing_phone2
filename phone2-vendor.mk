@@ -1126,7 +1126,7 @@ PRODUCT_PACKAGES += \
     libntcamallocator \
     libntcamcommonutils \
     libntcamcore \
-    libntcamera2ndk_vendor_v1 \
+    libntcamera2ndk_vendor_v3 \
     libntcamextened \
     libntcamimage_io \
     libntcammetadata \
