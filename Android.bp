@@ -8763,39 +8763,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0-impl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "vendor.qti.hardware.sensorscalibrate@1.0",
-                "libsensorcal",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vibrator.default",
     owner: "nothing",
     strip: {
@@ -19422,37 +19389,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsensorcal",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsensorcal.so",
-            ],
-            shared_libs: [
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-                "liblog",
-                "libssc",
-                "libutils",
-                "libcutils",
-                "libsensorslog",
-                "libsnsapi",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsensorslog",
     owner: "nothing",
     strip: {
@@ -19795,6 +19731,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsnsapi_v2",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsnsapi_v2.so",
+            ],
+            shared_libs: [
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libcutils",
+                "libutils",
+                "libqmi_common_so",
+                "libqmi_cci",
+                "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsnsdiaglog",
     owner: "nothing",
     strip: {
@@ -19806,14 +19772,14 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libsnsdiaglog.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "liblog",
                 "libdiag",
                 "libsensorslog",
                 "libutils",
                 "libcutils",
                 "libssc",
-                "libsnsapi",
+                "libsnsapi_v2",
                 "libc++",
                 "libc",
                 "libm",
@@ -19945,7 +19911,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libssc.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "liblog",
                 "libsensorslog",
                 "libcutils",
@@ -19953,7 +19919,7 @@ cc_prebuilt_library_shared {
                 "libqmi_common_so",
                 "libqmi_cci",
                 "libqmi_encdec",
-                "libsnsapi",
+                "libsnsapi_v2",
                 "libc++",
                 "libc",
                 "libm",
@@ -22321,9 +22287,9 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libsns_direct_channel_stub",
                 "libadsprpc",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "liblog",
-                "libsnsapi",
+                "libsnsapi_v2",
                 "libssc",
                 "libsnsdiaglog",
                 "libutils",
@@ -25242,34 +25208,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -28405,37 +28343,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.sensorscalibrate@1.0-service",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhidlbase",
-                "vendor.qti.hardware.sensorscalibrate@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.vibrator.service",
     owner: "nothing",
     target: {
@@ -29470,13 +29377,13 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/sensors.qti",
             ],
             shared_libs: [
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "liblog",
                 "libdiag",
                 "libssc",
                 "libsensorslog",
                 "libcutils",
-                "libsnsapi",
+                "libsnsapi_v2",
                 "libc++",
                 "libc",
                 "libm",
@@ -29511,6 +29418,49 @@ cc_prebuilt_binary {
                 "libssl",
                 "libqmi_cci",
                 "libqmi_common_so",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "slim_daemon",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/slim_daemon",
+            ],
+            shared_libs: [
+                "libgps.utils",
+                "liblog",
+                "libdiag",
+                "libqmi_csi",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_encdec",
+                "libloc_mq_client",
+                "libloc_base_util",
+                "libutils",
+                "libhidlbase",
+                "libsensorndkbridge",
+                "android.frameworks.sensorservice@1.0",
+                "libcutils",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libsnsapi_v2",
+                "libloc_api_v02_prebuilt",
+                "libloc_core",
+                "liblbs_core",
                 "libc++",
                 "libc",
                 "libm",
