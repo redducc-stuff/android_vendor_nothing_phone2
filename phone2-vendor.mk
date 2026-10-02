@@ -183,8 +183,8 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile5.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile6.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/VZW/VZW_profile7.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
-    vendor/nothing/phone2/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
+    vendor/nothing/phone2/proprietary/vendor/etc/data/nicm_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/nicm_config.xml \
+    vendor/nothing/phone2/proprietary/vendor/etc/data/tlpd_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/tlpd_oem_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/display/DPU8__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU8__.xml \
@@ -205,7 +205,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/ims-dataservice-daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims-dataservice-daemon.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.Pong.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.Pong.nfc.rc \
@@ -221,7 +221,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init_thermal-engine-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine-v2.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/loc-launcher.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/loc-launcher.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/nicmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nicmd.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/power.stats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power.stats.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qcrilNrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrilNrd.rc \
@@ -287,31 +287,34 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/pwr/VendorScenarioPowerOptFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/VendorScenarioPowerOptFeature.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/pwr/VideoPowerOptFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/VideoPowerOptFeature.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/10.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/11.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/12.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/13.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/13.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/14.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/14.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/15.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/15.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/6.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/6.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/7.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/7.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/8.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/8.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/9.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/9.0_config.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/14_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/14_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/15_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/15_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/4_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/4_version_update_ecc_table_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql \
-    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0006.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0006.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0007.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0007.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0008.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0008.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0009.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0009.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0010.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0010.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0011.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0011.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0012.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0012.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0013.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0013.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0014.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0014.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0015.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0015.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/config/0016.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/0016.0_config.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0000_initial_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0000_initial_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0001_version_intro_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0001_version_intro_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0002_version_add_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0002_version_add_wps_config_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0003_version_update_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0003_version_update_wps_config_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0004_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0004_version_update_ecc_table_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0005_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0005_version_update_ecc_table_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0006_version_change_property_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0006_version_change_property_table_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0007_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0007_version_update_ecc_table_qcrilnr.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0008_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0008_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0009_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0009_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0010_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0010_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0011_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0011_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0012_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0012_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0013_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0013_version_update_ecc_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0014_version_update_modules.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0014_version_update_modules.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql \
+    vendor/nothing/phone2/proprietary/vendor/etc/qcril_database/upgrade/other/0016_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/0016_version_update_ecc_table.sql \
     vendor/nothing/phone2/proprietary/vendor/etc/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/richtapresources/default/click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/click.he \
     vendor/nothing/phone2/proprietary/vendor/etc/richtapresources/default/double_click.he:$(TARGET_COPY_OUT_VENDOR)/etc/richtapresources/default/double_click.he \
@@ -337,7 +340,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/nothing/phone2/proprietary/vendor/etc/sar/sarconfig.json:$(TARGET_COPY_OUT_VENDOR)/etc/sar/sarconfig.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
-    vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm.policy \
@@ -348,6 +350,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/modemManager.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/modemManager.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/qcrilnr@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qcrilnr@2.0.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/qesdk.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qesdk.policy \
+    vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/qms.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qms.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/sensors-qesdk.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/sensors-qesdk.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
@@ -881,15 +884,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.mcx.policy.mfl \
     com.qualcomm.mcx.policy.xr \
     com.qualcomm.qti.dpm.api@1.0_vendor \
-    com.qualcomm.qti.imscmservice@1.0_vendor \
-    com.qualcomm.qti.imscmservice@2.0_vendor \
-    com.qualcomm.qti.imscmservice@2.1_vendor \
-    com.qualcomm.qti.imscmservice@2.2_vendor \
     com.qualcomm.qti.mcx.usecase.extension \
-    com.qualcomm.qti.uceservice@2.0_vendor \
-    com.qualcomm.qti.uceservice@2.1_vendor \
-    com.qualcomm.qti.uceservice@2.2_vendor \
-    com.qualcomm.qti.uceservice@2.3_vendor \
     deviceInfoServiceModuleNr \
     eglSubDriverAndroid \
     libEGL_adreno \
@@ -923,6 +918,7 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     jcos_client \
     lib-imscommon \
+    lib-imsdcservice \
     lib-imsdpl \
     lib-imsqimf \
     lib-imsrcsservice \
@@ -932,6 +928,7 @@ PRODUCT_PACKAGES += \
     lib-rtpcommon \
     lib-rtpcore \
     lib-rtpsl \
+    libATFWD \
     libAlacSwDec \
     libApeSwDec \
     libCB \
@@ -954,6 +951,7 @@ PRODUCT_PACKAGES += \
     libQnnHtp \
     libQnnHtpV69Stub \
     libQtiRilLoadable \
+    libQtiSocket \
     libTouchInputVM \
     libTrustedInput \
     libTrustedInputTZ \
@@ -1052,7 +1050,6 @@ PRODUCT_PACKAGES += \
     libdisplayqos \
     libdisplayskuutils \
     libdlrmsc \
-    libdpmqmihal \
     libdpps \
     libdrmfs \
     libdrmtime \
@@ -1098,7 +1095,6 @@ PRODUCT_PACKAGES += \
     libjni_aidenoiserutilv2 \
     libjni_imageutil \
     libjni_stfaceunlock_api \
-    libjnihelper \
     libjpege \
     libkcl \
     libkernelmanager \
@@ -1127,12 +1123,9 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_common \
     liblowi_wifihal \
-    liblqe \
-    libmasc \
     libmcs \
     libmctfengine_stub \
     libmdmdetect \
-    libmdmimgload \
     libmemutils \
     libmfGhostDetection \
     libmfec \
@@ -1155,20 +1148,15 @@ PRODUCT_PACKAGES += \
     libmouth_mask_detection.arcsoft \
     libmpbase \
     libnanopb \
-    libnative-api \
-    libnetmgr \
-    libnetmgr_common \
-    libnetmgr_datapath_proxy \
-    libnetmgr_nr_fusion \
-    libnetmgr_rmnet_ext \
-    libnetmgr_sscm3 \
-    libnetmgr_utils \
-    libnetmgrext_interface_client \
-    libnetmgrext_interface_server \
-    libnetmgrmodemproxy \
-    libnetmgrportutils \
-    libnetmgrxfrmutils \
-    libnlnetmgr \
+    libnicm \
+    libnicm_dsi \
+    libnicm_interface \
+    libnicm_internal \
+    libnicm_modemproxy \
+    libnicm_netlink \
+    libnicm_recovery \
+    libnicm_utils \
+    libnicm_vh \
     libnoteengine \
     libntcamallocator \
     libntcamcommonutils \
@@ -1209,7 +1197,6 @@ PRODUCT_PACKAGES += \
     libqc2filter \
     libqcbor \
     libqcc_file_agent \
-    libqcci_legacy \
     libqcmaputils \
     libqcodec2_base \
     libqcodec2_basecodec \
@@ -1241,9 +1228,9 @@ PRODUCT_PACKAGES += \
     libqdcm-mode-parser \
     libqdi \
     libqdma_file_agent \
-    libqdp \
     libqdpr \
     libqesdk \
+    libqesdk2_0 \
     libqesdk_manager \
     libqisl \
     libqll \
@@ -1255,12 +1242,13 @@ PRODUCT_PACKAGES += \
     libqmi_client_qmux \
     libqmi_common_so \
     libqmi_csi \
-    libqmi_csvt_srvc \
     libqmi_encdec \
-    libqmi_legacy \
-    libqmiextservices \
     libqmiservices \
+    libqms \
     libqms_client \
+    libqms_optimized_route_mgr_sdk \
+    libqms_packetstats_sdk \
+    libqms_sdf_sdk \
     libqppe \
     libqrtr \
     libqrtrclient \
@@ -1302,7 +1290,6 @@ PRODUCT_PACKAGES += \
     libshsc \
     libsi \
     libslimclient \
-    libsmemlog \
     libsnapdragoncolor-manager \
     libsnapdragoncolor-qdcm \
     libsns_api \
@@ -1327,7 +1314,7 @@ PRODUCT_PACKAGES += \
     libsynx \
     libsys_info_cache \
     libsysmon_cdsp_skel \
-    libsystem_health_mon \
+    libsystem_health_mon2 \
     libtestutils \
     libtfestriping \
     libthermalclient \
@@ -1372,9 +1359,24 @@ PRODUCT_PACKAGES += \
     libwvdrmengine \
     nfc_nci_nxp_snxxx \
     qcrilInterfaces \
+    qcrilIntermodulemsgs \
     qcrilMarshal \
     qcrilNrQmiModule \
+    qcrilNrSecureMode \
     qcrilNr_aidl_IQtiRadioConfig \
+    qcrilNr_aidl_IRadioConfig \
+    qcrilNr_aidl_IRadioMessaging \
+    qcrilNr_aidl_IRadioModem \
+    qcrilNr_aidl_IRadioNetwork \
+    qcrilNr_aidl_IRadioSap \
+    qcrilNr_aidl_IRadioSim \
+    qcrilNr_aidl_IRadioVoice \
+    qcrilNr_aidl_SecureElementService \
+    qcrilNr_aidl_UimLpaService \
+    qcrilNr_aidl_UimRemoteClient \
+    qcrilNr_aidl_UimRemoteServer \
+    qcrilNr_aidl_UimService \
+    qcrilNr_aidl_common \
     qcril_client \
     qcrild_libqcrilnr \
     qcrild_libqcrilnrutils \
@@ -1392,13 +1394,11 @@ PRODUCT_PACKAGES += \
     vendor.libmwqemiptablemgr \
     vendor.noth.hardware.camera-V1-ndk_platform \
     vendor.noth.hardware.camera-service-impl \
-    vendor.qti.data.factory@2.0_vendor \
-    vendor.qti.data.factory@2.1_vendor \
-    vendor.qti.data.factory@2.2_vendor \
-    vendor.qti.data.factory@2.3_vendor \
-    vendor.qti.data.factory@2.4_vendor \
-    vendor.qti.data.factory@2.5_vendor \
+    vendor.qti.ImsRtpService-V1-ndk_vendor \
+    vendor.qti.ImsRtpService-aidl-Impl \
+    vendor.qti.data.factoryservice-V1-ndk_vendor \
     vendor.qti.data.mwqem@1.0_vendor \
+    vendor.qti.data.mwqemaidlservice-V1-ndk_vendor \
     vendor.qti.data.slm@1.0_vendor \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.esepowermanager@1.0 \
@@ -1413,35 +1413,35 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-nothing \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
-    vendor.qti.hardware.data.cne.internal.api@1.0_vendor \
-    vendor.qti.hardware.data.cne.internal.constants@1.0_vendor \
-    vendor.qti.hardware.data.cne.internal.server@1.0_vendor \
-    vendor.qti.hardware.data.cne.internal.server@1.1_vendor \
-    vendor.qti.hardware.data.cne.internal.server@1.2_vendor \
+    vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor \
+    vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor \
+    vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor \
     vendor.qti.hardware.data.connection@1.0_vendor \
     vendor.qti.hardware.data.connection@1.1_vendor \
-    vendor.qti.hardware.data.connectionfactory-V1-ndk_platform_vendor \
-    vendor.qti.hardware.data.dataactivity-V1-ndk_platform_vendor \
+    vendor.qti.hardware.data.connectionaidl-V1-ndk \
+    vendor.qti.hardware.data.connectionfactory-V1-ndk_vendor \
+    vendor.qti.hardware.data.dataactivity-V1-ndk_vendor \
     vendor.qti.hardware.data.dynamicdds@1.0_vendor \
     vendor.qti.hardware.data.dynamicdds@1.1_vendor \
+    vendor.qti.hardware.data.dynamicddsaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.data.flow@1.0_vendor \
-    vendor.qti.hardware.data.iwlan@1.0_vendor \
-    vendor.qti.hardware.data.iwlan@1.1_vendor \
-    vendor.qti.hardware.data.ka-V1-ndk_platform_vendor \
+    vendor.qti.hardware.data.flow@1.1_vendor \
+    vendor.qti.hardware.data.flowaidlservice-V1-ndk_vendor \
+    vendor.qti.hardware.data.iwlandata-V2-ndk \
+    vendor.qti.hardware.data.ka-V1-ndk_vendor \
     vendor.qti.hardware.data.latency@1.0_vendor \
     vendor.qti.hardware.data.lce@1.0_vendor \
-    vendor.qti.hardware.data.qmi@1.0_vendor \
-    vendor.qti.hardware.dpmservice@1.0_vendor \
-    vendor.qti.hardware.dpmservice@1.1_vendor \
+    vendor.qti.hardware.data.lceaidlservice-V1-ndk_vendor \
+    vendor.qti.hardware.data.qmiaidlservice-V1-ndk_vendor \
+    vendor.qti.hardware.dpmaidlservice-V1-ndk_vendor \
     vendor.qti.hardware.dsp-V1-ndk \
     vendor.qti.hardware.eid@1.0 \
-    vendor.qti.hardware.embmssl@1.0_vendor \
-    vendor.qti.hardware.embmssl@1.1_vendor \
+    vendor.qti.hardware.embmsslaidl-V2-ndk_vendor \
     vendor.qti.hardware.factory@1.0 \
     vendor.qti.hardware.factory@1.1 \
     vendor.qti.hardware.limits@1.0_vendor \
     vendor.qti.hardware.limits@1.1_vendor \
-    vendor.qti.hardware.mwqemadapter@1.0_vendor \
+    vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule@1.0 \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
@@ -1450,9 +1450,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.qteeconnector@1.0 \
+    vendor.qti.hardware.radio.am-V1-ndk \
     vendor.qti.hardware.radio.am@1.0_vendor \
     vendor.qti.hardware.radio.atcmdfwd@1.0_vendor \
-    vendor.qti.hardware.radio.ims-V12-ndk_platform_vendor \
+    vendor.qti.hardware.radio.atfwd-V1-ndk \
+    vendor.qti.hardware.radio.common-V1-ndk \
+    vendor.qti.hardware.radio.ims-V16-ndk \
     vendor.qti.hardware.radio.ims@1.0_vendor \
     vendor.qti.hardware.radio.ims@1.1_vendor \
     vendor.qti.hardware.radio.ims@1.2_vendor \
@@ -1462,12 +1465,14 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.ims@1.6_vendor \
     vendor.qti.hardware.radio.ims@1.7_vendor \
     vendor.qti.hardware.radio.ims@1.8_vendor \
-    vendor.qti.hardware.radio.internal.deviceinfo@1.0_vendor \
+    vendor.qti.hardware.radio.internal.deviceinfo-V1-ndk \
+    vendor.qti.hardware.radio.lpa-V1-ndk \
     vendor.qti.hardware.radio.lpa@1.0_vendor \
     vendor.qti.hardware.radio.lpa@1.1_vendor \
     vendor.qti.hardware.radio.lpa@1.2_vendor \
+    vendor.qti.hardware.radio.qcrilhook-V1-ndk \
     vendor.qti.hardware.radio.qcrilhook@1.0_vendor \
-    vendor.qti.hardware.radio.qtiradio-V8-ndk_platform_vendor \
+    vendor.qti.hardware.radio.qtiradio-V16-ndk \
     vendor.qti.hardware.radio.qtiradio@1.0_vendor \
     vendor.qti.hardware.radio.qtiradio@2.0_vendor \
     vendor.qti.hardware.radio.qtiradio@2.1_vendor \
@@ -1476,16 +1481,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.qtiradio@2.4_vendor \
     vendor.qti.hardware.radio.qtiradio@2.5_vendor \
     vendor.qti.hardware.radio.qtiradio@2.6_vendor \
-    vendor.qti.hardware.radio.qtiradioconfig-V2-ndk_platform_vendor \
+    vendor.qti.hardware.radio.qtiradioconfig-V6-ndk \
+    vendor.qti.hardware.radio.uim-V1-ndk \
     vendor.qti.hardware.radio.uim@1.0_vendor \
     vendor.qti.hardware.radio.uim@1.1_vendor \
     vendor.qti.hardware.radio.uim@1.2_vendor \
+    vendor.qti.hardware.radio.uim_remote_client-V1-ndk \
     vendor.qti.hardware.radio.uim_remote_client@1.0_vendor \
     vendor.qti.hardware.radio.uim_remote_client@1.1_vendor \
     vendor.qti.hardware.radio.uim_remote_client@1.2_vendor \
+    vendor.qti.hardware.radio.uim_remote_server-V1-ndk \
     vendor.qti.hardware.radio.uim_remote_server@1.0_vendor \
     vendor.qti.hardware.sensorscalibrate@1.0 \
-    vendor.qti.hardware.slmadapter@1.0_vendor \
     vendor.qti.hardware.soter@1.0 \
     vendor.qti.hardware.trustedui@1.0 \
     vendor.qti.hardware.trustedui@1.1 \
@@ -1495,36 +1502,33 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     vendor.qti.ims.callcapability@1.0_vendor \
+    vendor.qti.ims.callcapabilityaidlservice-V1-ndk_vendor \
     vendor.qti.ims.callinfo@1.0_vendor \
-    vendor.qti.ims.configservice@1.0_vendor \
-    vendor.qti.ims.configservice@1.1_vendor \
-    vendor.qti.ims.connection@1.0_vendor \
-    vendor.qti.ims.factory@1.0_vendor \
-    vendor.qti.ims.factory@1.1_vendor \
-    vendor.qti.ims.factory@2.0_vendor \
-    vendor.qti.ims.factory@2.1_vendor \
-    vendor.qti.ims.factory@2.2_vendor \
+    vendor.qti.ims.configaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.connectionaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.factoryaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.imscmaidlservice-V1-ndk_vendor \
     vendor.qti.ims.rcsconfig@1.0_vendor \
     vendor.qti.ims.rcsconfig@1.1_vendor \
     vendor.qti.ims.rcsconfig@2.0_vendor \
     vendor.qti.ims.rcsconfig@2.1_vendor \
-    vendor.qti.ims.rcssip@1.0_vendor \
-    vendor.qti.ims.rcssip@1.1_vendor \
-    vendor.qti.ims.rcssip@1.2_vendor \
-    vendor.qti.ims.rcsuce@1.0_vendor \
-    vendor.qti.ims.rcsuce@1.1_vendor \
-    vendor.qti.ims.rcsuce@1.2_vendor \
-    vendor.qti.imsrtpservice@3.0-service-Impl \
-    vendor.qti.imsrtpservice@3.0_vendor \
+    vendor.qti.ims.rcssipaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.rcsuceaidlservice-V1-ndk_vendor \
+    vendor.qti.ims.uceaidlservice-V1-ndk_vendor \
     vendor.qti.latency@2.0_vendor \
     vendor.qti.latency@2.1_vendor \
+    vendor.qti.latency@2.2_vendor \
+    vendor.qti.latencyaidlservice-V1-ndk_vendor \
     vendor.qti.memory.pasrmanager-V1-ndk \
     vendor.qti.qesdhal@1.0 \
     vendor.qti.qesdhal@1.1-impl \
     vendor.qti.qesdhal@1.1 \
+    vendor.qti.qesdhal@1.2 \
+    vendor.qti.qesdhal@1.3 \
     vendor.qti.qesdsys-V1-ndk_platform \
     vendor.qti.snapdragonServices-V2-ndk_vendor \
     vendor.qti.snapdragonServices.qape-V1-ndk \
+    vendor.qti.syshealthmon-V1-ndk \
     vendor_lib_rfsa_adsp_bm2n00_bin \
     vendor_lib_rfsa_adsp_bm2n01_bin \
     vendor_lib_rfsa_adsp_bm2n02_bin \
@@ -1619,42 +1623,62 @@ PRODUCT_PACKAGES += \
     libencoderjpeg_jni \
     CACertService \
     CneApp \
-    IWlanService \
     TimeService \
     HotwordEnrollmentOKGoogleHEXAGON \
     HotwordEnrollmentXGoogleHEXAGON \
     com.nxp.nfc \
     androidx.camera.extensions.impl.advanced \
     com.android.hotwordenrollment.common.util \
+    ImsRtpService-aidl.xml \
     android.hardware.gnss-aidl-service-qti.xml \
     android.hardware.gnss@2.1-service-qti.xml \
+    android.hardware.radio.config.xml \
+    android.hardware.radio.data.xml \
+    android.hardware.radio.messaging.xml \
+    android.hardware.radio.modem.xml \
+    android.hardware.radio.network.xml \
+    android.hardware.radio.sap.xml \
+    android.hardware.radio.sim.xml \
+    android.hardware.radio.voice.xml \
     android.hardware.security.keymint-service-qti.xml \
     bluetooth_hci.xml \
     bluetooth_sar.xml \
     bttpi-saidl.xml \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
-    dataconnection-saidl.xml \
+    datafactoryservice-saidl.xml \
+    dpm-saidl.xml \
+    imsdcservice-saidl.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_lahaina_identity.xml \
+    mwqem-saidl.xml \
     power.stats.xml \
+    qcrilhook-saidl.xml \
+    qms-saidl.xml \
     qtiradio-saidl.xml \
     vendor.noth.hardware.camera-service.xml \
     vendor.qti.camera.provider.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
     vendor.qti.hardware.dsp-service.xml \
+    vendor.qti.hardware.embmssl.xml \
     vendor.qti.hardware.limits-service.xml \
+    vendor.qti.hardware.radio.am.xml \
     vendor.qti.hardware.radio.ims.xml \
+    vendor.qti.hardware.radio.lpa.xml \
     vendor.qti.hardware.radio.qtiradioconfig.xml \
+    vendor.qti.hardware.radio.uim.xml \
+    vendor.qti.hardware.radio.uim_remote_client.xml \
+    vendor.qti.hardware.radio.uim_remote_server.xml \
     vendor.qti.hardware.vibrator.service.xml \
-    ATFWD-daemon \
+    vendor.qti.ims.factoryaidlservice.xml \
+    vendor.qti.ims.imscmaidlservice.xml \
+    vendor.qti.ims.uceaidlservice.xml \
     adpl \
     adsprpcd \
     cdsprpcd \
     cnd \
     diag-router \
-    dpmQmiMgr \
     dspservice \
     edgnss-daemon \
     embmsslServer \
@@ -1685,21 +1709,19 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.media.c2audio@1.0-service \
+    ims-dataservice-daemon \
     ims_rtp_daemon \
     imsdaemon \
     init.qcom.sensors \
     init.qti.qcv \
     irsc_util \
-    ks \
     loadalgo \
     loc_launcher \
     lowi-server \
-    mdm_helper \
-    mdm_helper_proxy \
     mlid \
     mmid \
     msm_irqbalance \
-    netmgrd \
+    nicmd \
     ntf-service \
     pd-mapper \
     pm-proxy \
