@@ -195,7 +195,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.bluetooth@aidl-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@aidl-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.gatekeeper-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.identity-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
@@ -1016,6 +1015,7 @@ PRODUCT_PACKAGES += \
     libcolor-default \
     libcom.qti.chinodeutils \
     libconfigdb \
+    libcpion \
     libcv_common \
     libcvp2_1 \
     libcvpcpuRev_skel \
@@ -1152,6 +1152,7 @@ PRODUCT_PACKAGES += \
     libntcamyuv \
     libntf \
     libntofflinepostproc \
+    liboemcrypto \
     libomp \
     libopencv \
     libopencv3a \
@@ -1328,10 +1329,8 @@ PRODUCT_PACKAGES += \
     libwfdutils_proprietary \
     libwms \
     libwqe \
-    libwvhidl \
     libxml \
     libxtadapter \
-    libwvdrmengine \
     qcrilInterfaces \
     qcrilIntermodulemsgs \
     qcrilMarshal \
@@ -1589,6 +1588,7 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libvpp_vqa_networks_so \
     vendor_lib_rfsa_adsp_libvpt_action_recognition_so \
     libencoderjpeg_jni \
+    com.google.android.widevine-12498615 \
     CACertService \
     CneApp \
     TimeService \
@@ -1598,6 +1598,7 @@ PRODUCT_PACKAGES += \
     androidx.camera.extensions.impl.advanced \
     com.android.hotwordenrollment.common.util \
     ImsRtpService-aidl.xml \
+    android.hardware.drm-service.xml \
     android.hardware.gnss-aidl-service-qti.xml \
     android.hardware.gnss@2.1-service-qti.xml \
     android.hardware.radio.config.xml \
@@ -1617,7 +1618,6 @@ PRODUCT_PACKAGES += \
     datafactoryservice-saidl.xml \
     dpm-saidl.xml \
     imsdcservice-saidl.xml \
-    manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_lahaina_identity.xml \
     mwqem-saidl.xml \
     power.stats.xml \
@@ -1656,7 +1656,6 @@ PRODUCT_PACKAGES += \
     engine-service \
     garden_app \
     android.hardware.bluetooth@aidl-service-qti \
-    android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper-service-qti \
     android.hardware.identity-service-qti \
     android.hardware.power.stats-service \

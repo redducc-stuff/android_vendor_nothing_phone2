@@ -12177,6 +12177,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcpion",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcpion.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libdmabufheap",
+                "libvmmem",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcv_common",
     owner: "nothing",
     strip: {
@@ -16330,6 +16358,41 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "libcamera_metadata",
                 "libntcamcommonutils",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboemcrypto",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liboemcrypto.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "liblog",
+                "libQSEEComAPI",
+                "libcpion",
+                "libminkdescriptor",
+                "libcutils",
+                "libtrustedapploader",
+                "vendor.qti.hardware.display.config-V7-ndk",
+                "libpower",
+                "libcrypto",
+                "libbinder_ndk",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -21689,45 +21752,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwvhidl",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwvhidl.so",
-            ],
-            shared_libs: [
-                "libcrypto_shim",
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
-                "android.hardware.drm@1.4",
-                "android.hidl.memory@1.0",
-                "libbase",
-                "libcrypto",
-                "libcutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libxml",
     owner: "nothing",
     strip: {
@@ -21778,38 +21802,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwvdrmengine",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mediadrm/libwvdrmengine.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcrypto",
-                "libhidlbase",
-                "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-                "libstagefright_foundation",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "mediadrm",
     prefer: true,
     soc_specific: true,
 }
@@ -27540,6 +27532,14 @@ cc_prebuilt_library_shared {
     system_ext_specific: true,
 }
 
+prebuilt_apex {
+    name: "com.google.android.widevine-12498615",
+    owner: "nothing",
+    src: "proprietary/vendor/apex/com.google.android.widevine-12498615.apex",
+    filename: "com.google.android.widevine-12498615.apex",
+    soc_specific: true,
+}
+
 android_app_import {
     name: "CACertService",
     owner: "nothing",
@@ -27627,6 +27627,15 @@ prebuilt_etc_xml {
     name: "ImsRtpService-aidl.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/ImsRtpService-aidl.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.drm-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.drm-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -27798,15 +27807,6 @@ prebuilt_etc_xml {
     name: "imsdcservice-saidl.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/imsdcservice-saidl.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_android.hardware.drm@1.4-service.widevine.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -28398,42 +28398,6 @@ cc_prebuilt_binary {
                 "libqti_vndfwk_detect_vendor",
                 "vendor.qti.hardware.bluetooth_sar@aidl-impl",
                 "vendor.qti.hardware.bluetooth_sar-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.drm@1.4-service.widevine",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine",
-            ],
-            shared_libs: [
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
-                "libbase",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libbinder",
-                "android.hardware.drm@1.4",
-                "libwvhidl",
                 "libc++",
                 "libc",
                 "libm",
@@ -30392,17 +30356,13 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/wfdhdcphalservice",
             ],
             shared_libs: [
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
-                "android.hidl.memory@1.0",
-                "libhidlmemory",
                 "libc++",
-                "libhidlbase",
                 "libbinder",
+                "libbinder_ndk",
+                "libcrypto",
                 "libbase",
                 "liblog",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
                 "libutils",
                 "libcutils",
                 "libwfdhdcpcp",
@@ -30411,6 +30371,7 @@ cc_prebuilt_binary {
                 "libwfdutils_proprietary",
                 "libavservices_minijail",
                 "libwfddisplayconfig_vendor",
+                "android.hardware.drm-V1-ndk",
                 "libc",
                 "libm",
                 "libdl",
