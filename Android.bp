@@ -8386,38 +8386,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.gatekeeper@1.0-impl-qti",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so",
-            ],
-            shared_libs: [
-                "android.hardware.gatekeeper@1.0",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libkeymasterdeviceutils",
-                "libqcbor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "camera.qcom",
     owner: "nothing",
     strip: {
@@ -8549,6 +8517,41 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc++",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqtigatekeeper",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/libqtigatekeeper.so",
+            ],
+            shared_libs: [
+                "android.hardware.gatekeeper-V1-ndk",
+                "libhardware",
+                "libbinder_ndk",
+                "libbase",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libgatekeeper",
+                "libkeymasterdeviceutils",
+                "libqcbor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -29151,19 +29154,15 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.gatekeeper@1.0-service-qti",
+    name: "android.hardware.gatekeeper-service-qti",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti",
+                "proprietary/vendor/bin/hw/android.hardware.gatekeeper-service-qti",
             ],
             shared_libs: [
-                "android.hardware.gatekeeper@1.0",
-                "libhardware",
-                "libhidlbase",
-                "libutils",
-                "liblog",
+                "libqtigatekeeper",
                 "libc++",
                 "libc",
                 "libm",

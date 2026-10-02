@@ -196,7 +196,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.bluetooth@aidl-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@aidl-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.gatekeeper-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.identity-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
@@ -895,10 +895,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl-qti \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@aidl-impl-qti \
-    android.hardware.gatekeeper@1.0-impl-qti \
     camera.qcom \
     com.qti.chi.override \
     fingerprint.default \
+    libqtigatekeeper \
     mbedtls_qti \
     vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.bluetooth_sar@aidl-impl \
@@ -1681,7 +1681,7 @@ PRODUCT_PACKAGES += \
     garden_app \
     android.hardware.bluetooth@aidl-service-qti \
     android.hardware.drm@1.4-service.widevine \
-    android.hardware.gatekeeper@1.0-service-qti \
+    android.hardware.gatekeeper-service-qti \
     android.hardware.identity-service-qti \
     android.hardware.power.stats-service \
     android.hardware.security.keymint-service-qti \
