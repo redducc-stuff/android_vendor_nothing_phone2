@@ -26053,6 +26053,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.snapdragonServices-V1-ndk",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.snapdragonServices-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.snapdragonServices-V2-ndk_vendor",
     stem: "vendor.qti.snapdragonServices-V2-ndk",
     owner: "nothing",
@@ -27294,6 +27319,15 @@ prebuilt_etc_xml {
     name: "qtiradio-saidl.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/qtiradio-saidl.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "snapdragon_services.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/snapdragon_services.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -29359,6 +29393,36 @@ cc_prebuilt_binary {
                 "libloc_api_v02_prebuilt",
                 "libloc_core",
                 "liblbs_core",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "snapdragon_services",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/snapdragon_services",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbinder_ndk",
+                "vendor.qti.snapdragonServices-V1-ndk",
+                "libbase",
+                "libutils",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",

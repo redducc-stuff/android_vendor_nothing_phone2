@@ -227,6 +227,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qms.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qms.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/snapdragon_services.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/snapdragon_services.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.noth.hardware.camera-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.noth.hardware.camera-service.rc \
@@ -1471,6 +1472,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qesdhal@1.2 \
     vendor.qti.qesdhal@1.3 \
     vendor.qti.qesdsys-V1-ndk_platform \
+    vendor.qti.snapdragonServices-V1-ndk \
     vendor.qti.snapdragonServices-V2-ndk_vendor \
     vendor.qti.snapdragonServices.qape-V1-ndk \
     vendor.qti.syshealthmon-V1-ndk \
@@ -1601,6 +1603,7 @@ PRODUCT_PACKAGES += \
     qcrilhook-saidl.xml \
     qms-saidl.xml \
     qtiradio-saidl.xml \
+    snapdragon_services.xml \
     vendor.noth.hardware.camera-service.xml \
     vendor.qti.camera.provider.xml \
     vendor.qti.diag.hal.service.xml \
@@ -1683,6 +1686,7 @@ PRODUCT_PACKAGES += \
     sensors.qti \
     shsusrd \
     slim_daemon \
+    snapdragon_services \
     sscrpcd \
     ssgqmigd64 \
     ssgtzd \
