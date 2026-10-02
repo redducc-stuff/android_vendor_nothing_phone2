@@ -8691,7 +8691,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.capabilityconfigstore@1.0-impl",
+    name: "vendor.qti.hardware.capabilityconfigstore-impl",
     owner: "nothing",
     strip: {
         none: true,
@@ -8699,17 +8699,16 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so",
+                "proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore-impl.so",
             ],
             shared_libs: [
                 "liblog",
                 "libcutils",
                 "libbase",
                 "libutils",
-                "libhardware",
-                "libhidlbase",
                 "libxml2",
-                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "vendor.qti.hardware.capabilityconfigstore-V1-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24219,6 +24218,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.capabilityconfigstore-V1-ndk",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor",
     stem: "vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk",
     owner: "nothing",
@@ -28761,6 +28785,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "vendor.qti.hardware.capabilityconfigstore-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.capabilityconfigstore-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.qti.hardware.dsp-service.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.dsp-service.xml",
@@ -29647,22 +29680,22 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.capabilityconfigstore@1.0-service",
+    name: "vendor.qti.hardware.capabilityconfigstore-service",
     owner: "nothing",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service",
+                "proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore-service",
             ],
             shared_libs: [
                 "liblog",
                 "libcutils",
                 "libbase",
                 "libutils",
-                "libhardware",
-                "libhidlbase",
                 "libxml2",
-                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "vendor.qti.hardware.capabilityconfigstore-V1-ndk",
+                "vendor.qti.hardware.capabilityconfigstore-impl",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",

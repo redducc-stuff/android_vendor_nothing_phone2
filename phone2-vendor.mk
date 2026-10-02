@@ -239,7 +239,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.esepowermanager@1.1-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
+    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.eid@1.0-service.rc \
@@ -905,7 +905,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.esepowermanager@1.1-impl \
     vendor.qti.hardware.bluetooth_sar@aidl-impl \
     vendor.qti.hardware.bttpi-impl \
-    vendor.qti.hardware.capabilityconfigstore@1.0-impl \
+    vendor.qti.hardware.capabilityconfigstore-impl \
     vendor.qti.hardware.eid@1.0-impl \
     vendor.qti.hardware.fm-impl \
     vendor.qti.hardware.qccvndhal@1.0-impl \
@@ -1413,6 +1413,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.aon@1.0-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-nothing \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
+    vendor.qti.hardware.capabilityconfigstore-V1-ndk \
     vendor.qti.hardware.data.cneaidlservice.internal.api-V1-ndk_vendor \
     vendor.qti.hardware.data.cneaidlservice.internal.constants-V1-ndk_vendor \
     vendor.qti.hardware.data.cneaidlservice.internal.server-V1-ndk_vendor \
@@ -1660,6 +1661,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.camera.provider.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
+    vendor.qti.hardware.capabilityconfigstore-service.xml \
     vendor.qti.hardware.dsp-service.xml \
     vendor.qti.hardware.embmssl.xml \
     vendor.qti.hardware.limits-service.xml \
@@ -1696,7 +1698,7 @@ PRODUCT_PACKAGES += \
     vendor.noth.hardware.camera-service \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.esepowermanager@1.1-service \
-    vendor.qti.hardware.capabilityconfigstore@1.0-service \
+    vendor.qti.hardware.capabilityconfigstore-service \
     vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.eid@1.0-service \
     vendor.qti.hardware.factory@1.0-service \
