@@ -1,7 +1,11 @@
-<manifest version="1.0" type="device">
+<!--
+    Input:
+        vendor/noth/hardware/powerstats/power.stats.xml
+-->
+<manifest version="8.0" type="device">
     <hal format="aidl">
         <name>android.hardware.power.stats</name>
-        <version>1</version>
+        <version>2</version>
         <fqname>IPowerStats/default</fqname>
     </hal>
 </manifest>

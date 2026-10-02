@@ -12811,8 +12811,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "liblocdiagiface",
                 "libutils",
-                "libqcbor",
-                "libminkdescriptor",
                 "libc++",
                 "libc",
                 "libm",
@@ -12976,90 +12974,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgarden",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgarden.so",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "libloc_core",
-                "liblocation_api",
-                "liblog",
-                "libdataitems",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V1-ndk",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss.visibility_control@1.0",
-                "android.hardware.gnss.measurement_corrections@1.0",
-                "android.hardware.gnss.measurement_corrections@1.1",
-                "libhidlbase",
-                "vendor.qti.gnss-V3-ndk_platform",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgarden_haltests_e2e",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgarden_haltests_e2e.so",
-            ],
-            shared_libs: [
-                "libgarden",
-                "libgps.utils",
-                "libloc_core",
-                "liblocation_api",
-                "liblog",
-                "libutils",
-                "libbase",
-                "libbinder_ndk",
-                "android.hardware.gnss-V1-ndk",
-                "android.hardware.gnss@1.0",
-                "android.hardware.gnss@1.1",
-                "android.hardware.gnss@2.0",
-                "android.hardware.gnss@2.1",
-                "android.hardware.gnss.visibility_control@1.0",
-                "android.hardware.gnss.measurement_corrections@1.0",
-                "android.hardware.gnss.measurement_corrections@1.1",
-                "vendor.qti.gnss-V3-ndk_platform",
-                "libhidlbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libgdtap",
     owner: "nothing",
     strip: {
@@ -13115,34 +13029,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc++",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libgnsspps",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgnsspps.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
             ],
         },
     },
@@ -13647,9 +13533,18 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libloc_core",
                 "libgps.utils",
-                "libloc_api_v02",
+                "libloc_api_v02_prebuilt",
                 "libloc_util",
                 "libloc_base_util",
+                "libloc_mq_client",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libwifiobserver",
+                "libizat_client_api",
+                "liblocation_api",
+                "liblowi_common",
+                "libbinder_ndk",
+                "libcrypto",
+                "libz",
                 "libsqlite",
                 "liblog",
                 "libc++",
@@ -13735,6 +13630,37 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjnihelper",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libjnihelper.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmiservices",
+                "libqmi_cci",
+                "libcacertclient",
+                "libbinder_ndk",
+                "vendor.qti.hardware.cacertaidlservice-V1-ndk_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -13944,7 +13870,7 @@ cc_prebuilt_library_shared {
                 "libcrypto",
                 "libsqlite",
                 "libloc_base_util",
-                "libloc_api_v02",
+                "libloc_api_v02_prebuilt",
                 "libmdmdetect",
                 "libperipheral_client",
                 "libpdmapper",
@@ -14123,7 +14049,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libloc_api_v02",
+    name: "libloc_api_v02_prebuilt",
+    stem: "libloc_api_v02",
     owner: "nothing",
     strip: {
         none: true,
@@ -14173,33 +14100,6 @@ cc_prebuilt_library_shared {
                 "liblocation_api",
                 "libqmi_cci",
                 "libqmi_common_so",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libloc_base_util",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libloc_base_util.so",
-            ],
-            shared_libs: [
-                "libsqlite",
-                "libssl",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -14339,34 +14239,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libloc_socket",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libloc_socket.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libgps.utils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libloc_util",
     owner: "nothing",
     strip: {
@@ -14382,6 +14254,8 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libgps.utils",
+                "android.frameworks.location.altitude-V2-ndk",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -14418,6 +14292,7 @@ cc_prebuilt_library_shared {
                 "libloc_base_util",
                 "libloc_mq_client",
                 "liblowi_common",
+                "libwifiobserver",
                 "libc++",
                 "libc",
                 "libm",
@@ -14570,6 +14445,7 @@ cc_prebuilt_library_shared {
                 "libloc_base_util",
                 "libloc_mq_client",
                 "liblowi_common",
+                "wifi_legacy",
                 "libc++",
                 "libc",
                 "libm",
@@ -18630,35 +18506,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqppe",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqppe.so",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "liblog",
-                "liblocdiagiface",
-                "libdiag",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqrtr",
     owner: "nothing",
     strip: {
@@ -20282,37 +20129,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsynergy_loc_api",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsynergy_loc_api.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libloc_core",
-                "libgps.utils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libsynx",
     owner: "nothing",
     strip: {
@@ -21490,6 +21306,39 @@ cc_prebuilt_library_shared {
                 "libion",
                 "libdmabufheap",
                 "libvmmem",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwifiobserver",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libwifiobserver.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libloc_core",
+                "libgps.utils",
+                "libdataitems",
+                "liblowi_client",
+                "liblocation_api",
+                "libloc_base_util",
+                "liblowi_common",
                 "libc++",
                 "libc",
                 "libm",
@@ -22963,7 +22812,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.gnss-V3-ndk_platform",
+    name: "vendor.qti.gnss-V7-ndk",
     owner: "nothing",
     strip: {
         none: true,
@@ -22971,32 +22820,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.gnss-V3-ndk_platform.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.gnss-V5-ndk_platform",
-    owner: "nothing",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.gnss-V5-ndk_platform.so",
+                "proprietary/vendor/lib64/vendor.qti.gnss-V7-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -23026,7 +22850,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "vendor.qti.gnss-V5-ndk_platform",
+                "vendor.qti.gnss-V7-ndk",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -23040,6 +22864,8 @@ cc_prebuilt_library_shared {
                 "libxtadapter",
                 "libizat_core",
                 "libizat_client_api",
+                "libloc_base_util",
+                "libloc_mq_client",
                 "libc++",
                 "libc",
                 "libm",
@@ -27379,15 +27205,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.gnss-aidl-service-qti.xml",
-    owner: "nothing",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.radio.config.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.radio.config.xml",
@@ -28012,6 +27829,7 @@ cc_prebuilt_binary {
                 "libcdfw_remote_api",
                 "libpal_net_if",
                 "libsys_info_cache",
+                "libavservices_minijail",
                 "libc++",
                 "libc",
                 "libm",
@@ -28074,37 +27892,6 @@ cc_prebuilt_binary {
                 "libengineplugin",
                 "liblog",
                 "liblocdiagiface",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "garden_app",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/garden_app",
-            ],
-            shared_libs: [
-                "libgarden",
-                "libgarden_haltests_e2e",
-                "libgps.utils",
-                "liblocation_api",
-                "libloc_core",
-                "liblog",
                 "libutils",
                 "libc++",
                 "libc",
@@ -28244,7 +28031,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "android.hardware.power.stats-V1-ndk",
+                "android.hardware.power.stats-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -28985,6 +28772,11 @@ cc_prebuilt_binary {
                 "libnl",
                 "libwpa_client",
                 "liblowi_common",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libbinder_ndk",
+                "libz",
+                "libcrypto",
+                "libcld80211",
                 "libqmi_cci",
                 "libqmi_common_so",
                 "libdiag",
@@ -29017,7 +28809,6 @@ cc_prebuilt_binary {
                 "liblowi_client",
                 "libminksocket_vendor",
                 "libloc_base_util",
-                "liblog",
                 "liblowi_common",
                 "libc++",
                 "libc",
@@ -29619,12 +29410,13 @@ cc_prebuilt_binary {
                 "libqwes",
                 "libcutils",
                 "libutils",
+                "libcrypto",
                 "liblog",
                 "libminkdescriptor",
                 "libQSEEComAPI",
-                "libdsi_netctrl",
                 "libqcbor",
                 "libminksocket_vendor",
+                "libdsi_netctrl",
                 "libc++",
                 "libc",
                 "libm",
@@ -29719,45 +29511,6 @@ cc_prebuilt_binary {
                 "libssl",
                 "libqmi_cci",
                 "libqmi_common_so",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "slim_daemon",
-    owner: "nothing",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/slim_daemon",
-            ],
-            shared_libs: [
-                "libgps.utils",
-                "liblog",
-                "libdiag",
-                "libqmi_csi",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_encdec",
-                "libutils",
-                "libhidlbase",
-                "libsensorndkbridge",
-                "android.hardware.sensors@1.0",
-                "android.frameworks.sensorservice@1.0",
-                "libloc_api_v02",
-                "libloc_core",
-                "liblbs_core",
                 "libc++",
                 "libc",
                 "libm",
@@ -30186,6 +29939,9 @@ cc_prebuilt_binary {
                 "libavservices_minijail",
                 "libsys_info_cache",
                 "libpal_net_if",
+                "libbinder",
+                "libbinder_ndk",
+                "libqcc_sdk",
                 "libqcc_file_agent",
                 "libc++",
                 "libc",
@@ -30216,18 +29972,15 @@ cc_prebuilt_binary {
                 "libcrypto",
                 "libz",
                 "libsqlite",
-                "libqmi_cci",
-                "libqmi_common_so",
                 "libgps.utils",
                 "libloc_base_util",
                 "libloc_mq_client",
                 "liblowi_common",
+                "liblowi_client",
                 "libloc_core",
                 "libizat_core",
                 "liblbs_core",
                 "libavservices_minijail",
-                "libgdtap",
-                "liblowi_client",
                 "libc++",
                 "libc",
                 "libm",

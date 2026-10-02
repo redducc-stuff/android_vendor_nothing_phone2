@@ -1043,11 +1043,8 @@ PRODUCT_PACKAGES += \
     libface3d_dev \
     libfastcvdsp_stub \
     libfastcvopt \
-    libgarden \
-    libgarden_haltests_e2e \
     libgdtap \
     libgf_hal \
-    libgnsspps \
     libgpudataproducer \
     libgsl \
     libhdr10plus \
@@ -1067,6 +1064,7 @@ PRODUCT_PACKAGES += \
     libjni_aidenoiserutilv2 \
     libjni_imageutil \
     libjni_stfaceunlock_api \
+    libjnihelper \
     libjpege \
     libkcl \
     libkernelmanager \
@@ -1080,14 +1078,12 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libllvm-qgl \
     libloadalgo_stub \
-    libloc_api_v02 \
+    libloc_api_v02_prebuilt \
     libloc_api_wds \
-    libloc_base_util \
     libloc_eng_hub \
     libloc_mq_client \
     libloc_qwes_iface \
     libloc_ril_client \
-    libloc_socket \
     libloc_util \
     liblocationservice \
     liblocationservice_glue \
@@ -1223,7 +1219,6 @@ PRODUCT_PACKAGES += \
     libqms_optimized_route_mgr_sdk \
     libqms_packetstats_sdk \
     libqms_sdf_sdk \
-    libqppe \
     libqrtr \
     libqrtrclient \
     libqseed3 \
@@ -1281,7 +1276,6 @@ PRODUCT_PACKAGES += \
     libsubsystem_control \
     libsuperresolution_raw.arcsoft \
     libswregistrationalgo \
-    libsynergy_loc_api \
     libsynx \
     libsys_info_cache \
     libsysmon_cdsp_skel \
@@ -1321,6 +1315,7 @@ PRODUCT_PACKAGES += \
     libwfduibcsrc_vendor \
     libwfduibcsrcinterface_vendor \
     libwfdutils_proprietary \
+    libwifiobserver \
     libwms \
     libwqe \
     libxml \
@@ -1367,8 +1362,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.mwqemaidlservice-V1-ndk_vendor \
     vendor.qti.data.slm@1.0_vendor \
     vendor.qti.diaghal-V1-ndk_vendor \
-    vendor.qti.gnss-V3-ndk_platform \
-    vendor.qti.gnss-V5-ndk_platform \
+    vendor.qti.gnss-V7-ndk \
     vendor.qti.gnss-service \
     vendor.qti.hardware.ListenSoundModelAidl-V1-ndk \
     vendor.qti.hardware.bluetooth_sar-V1-ndk \
@@ -1590,7 +1584,6 @@ PRODUCT_PACKAGES += \
     com.android.hotwordenrollment.common.util \
     ImsRtpService-aidl.xml \
     android.hardware.drm-service.xml \
-    android.hardware.gnss-aidl-service-qti.xml \
     android.hardware.radio.config.xml \
     android.hardware.radio.data.xml \
     android.hardware.radio.messaging.xml \
@@ -1647,7 +1640,6 @@ PRODUCT_PACKAGES += \
     edgnss-daemon \
     embmsslServer \
     engine-service \
-    garden_app \
     android.hardware.bluetooth@aidl-service-qti \
     android.hardware.gatekeeper-service-qti \
     android.hardware.identity-service-qti \
@@ -1700,7 +1692,6 @@ PRODUCT_PACKAGES += \
     rmt_storage \
     sensors.qti \
     shsusrd \
-    slim_daemon \
     sscrpcd \
     ssgqmigd64 \
     ssgtzd \
