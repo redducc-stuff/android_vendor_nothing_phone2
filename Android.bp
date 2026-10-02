@@ -16013,6 +16013,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libntofflinepostproc.so",
             ],
             shared_libs: [
+                "libcamhidl_shim",
                 "libc++",
                 "libcutils",
                 "liblog",
@@ -22958,6 +22959,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.camera.aon@1.0-service-impl.so",
             ],
             shared_libs: [
+                "libcamhidl_shim",
                 "libc++",
                 "libcutils",
                 "liblog",
@@ -23032,6 +23034,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so",
             ],
             shared_libs: [
+                "libcamhidl_shim",
                 "libc++",
                 "libcutils",
                 "liblog",
