@@ -1256,16 +1256,19 @@ PRODUCT_PACKAGES += \
     libsnapdragoncolor-qdcm \
     libsns_api \
     libsns_device_mode_stub \
+    libsns_direct_channel_stub-pong \
     libsns_direct_channel_stub \
     libsns_registry_skel \
     libsnsapi-full \
     libsnsapi \
     libsnsapi_v2 \
+    libsnsdiaglog-pong \
     libsnsdiaglog \
     libsoc_helper \
     libspcom \
     libspectre \
     libspl \
+    libssc-pong \
     libssc \
     libssc_default_listener \
     libssd \

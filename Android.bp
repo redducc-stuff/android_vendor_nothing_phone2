@@ -19616,6 +19616,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsns_direct_channel_stub-pong",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsns_direct_channel_stub-pong.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libutils",
+                "libcutils",
+                "libadsprpc",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsns_direct_channel_stub",
     owner: "nothing",
     strip: {
@@ -19761,6 +19789,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsnsdiaglog-pong",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsnsdiaglog-pong.so",
+            ],
+            shared_libs: [
+                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "liblog",
+                "libdiag",
+                "libsensorslog",
+                "libutils",
+                "libcutils",
+                "libssc-pong",
+                "libsnsapi",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsnsdiaglog",
     owner: "nothing",
     strip: {
@@ -19887,6 +19947,39 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libQSEEComAPI",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libssc-pong",
+    owner: "nothing",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libssc-pong.so",
+            ],
+            shared_libs: [
+                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+                "liblog",
+                "libsensorslog",
+                "libcutils",
+                "libutils",
+                "libqmi_common_so",
+                "libqmi_cci",
+                "libqmi_encdec",
+                "libsnsapi",
                 "libc++",
                 "libc",
                 "libm",
@@ -22285,13 +22378,13 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/sensors.ssc.so",
             ],
             shared_libs: [
-                "libsns_direct_channel_stub",
+                "libsns_direct_channel_stub-pong",
                 "libadsprpc",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
                 "liblog",
-                "libsnsapi_v2",
-                "libssc",
-                "libsnsdiaglog",
+                "libsnsapi",
+                "libssc-pong",
+                "libsnsdiaglog-pong",
                 "libutils",
                 "libcutils",
                 "libsensorslog",
