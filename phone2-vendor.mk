@@ -211,7 +211,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.ntf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ntf.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qccvendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qccvendor.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
@@ -222,7 +221,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/power.stats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power.stats.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qcrilNrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrilNrd.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qms.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qms.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
@@ -236,14 +234,11 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.display.color-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.color-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.dsp-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.factory@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
-    vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/nothing/phone2/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
@@ -334,8 +329,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy \
-    vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
-    vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/modemManager.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/modemManager.policy \
     vendor/nothing/phone2/proprietary/vendor/etc/seccomp_policy/qcrilnr@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qcrilnr@2.0.policy \
@@ -484,7 +477,6 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/config/waipio_vertigo_lsm6dst_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/waipio_vertigo_lsm6dst_0.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/config/waipio_vertigo_lsm6dst_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/waipio_vertigo_lsm6dst_1.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
-    vendor/nothing/phone2/proprietary/vendor/etc/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/nothing/phone2/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/nothing/phone2/proprietary/vendor/etc/sysconfig/cacert-oem-defined-uids.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/cacert-oem-defined-uids.xml \
@@ -912,21 +904,16 @@ PRODUCT_PACKAGES += \
     lib-rtpcore \
     lib-rtpsl \
     libATFWD \
-    libAlacSwDec \
-    libApeSwDec \
     libCB \
-    libEvrcSwCodec \
     libFace3DTA \
     libFace3D_hlos \
     libFileMux_proprietary \
-    libFlacSwDec \
     libGPreqcancel \
     libGPreqcancel_svc \
     libOpenCL \
     libOpenCL_adreno \
     libQ6MSFR_manager_stub \
     libQSEEComAPI \
-    libQcelp13SwCodec \
     libQnnHtp \
     libQnnHtpV69Stub \
     libQtiRilLoadable \
@@ -1017,15 +1004,9 @@ PRODUCT_PACKAGES += \
     libdepthcomputation \
     libdiag \
     libdiagjni \
-    libdigital-dimming \
-    libdisp-aba \
-    libdisplayqos \
-    libdisplayskuutils \
     libdlrmsc \
-    libdpps \
     libdrmfs \
     libdrmtime \
-    libdsd2pcm \
     libdsi_netctrl \
     libdsutils \
     libdualcam_optical_zoom_control \
@@ -1046,13 +1027,9 @@ PRODUCT_PACKAGES += \
     libgsl \
     libhdr10plus \
     libhdr_stub \
-    libhdr_tm \
-    libhdrdynamic \
-    libhdrdynamicootf \
     libhme \
     libhyperzoom.arcsoft \
     libidl \
-    libintervmipc \
     libipebpsstriping \
     libipebpsstriping170 \
     libipebpsstriping480 \
@@ -1091,7 +1068,6 @@ PRODUCT_PACKAGES += \
     libmcs \
     libmctfengine_stub \
     libmdmdetect \
-    libmemutils \
     libmfGhostDetection \
     libmfec \
     libminkdescriptor \
@@ -1104,7 +1080,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_mfnr \
     libmmcamera_mfnr_t4 \
     libmmcamera_pdpc \
-    libmmosal_vendor \
     libmmrtpdecoder_vendor \
     libmmrtpencoder_vendor \
     libmorpho_MotionSensor \
@@ -1152,30 +1127,10 @@ PRODUCT_PACKAGES += \
     libpdnotifier \
     libperipheral_client \
     libpn560_fw \
-    libqc2audio_base \
-    libqc2audio_basecodec \
-    libqc2audio_core \
-    libqc2audio_hooks \
-    libqc2audio_hwaudiocodec \
-    libqc2audio_platform \
-    libqc2audio_swaudiocodec \
-    libqc2audio_utils \
-    libqc2colorconvertfilter \
-    libqc2filter \
     libqcbor \
     libqcc_file_agent \
     libqcc_sdk \
     libqcmaputils \
-    libqcodec2_base \
-    libqcodec2_basecodec \
-    libqcodec2_core \
-    libqcodec2_filterbase \
-    libqcodec2_hooks \
-    libqcodec2_mockfilter \
-    libqcodec2_mockqc2filter \
-    libqcodec2_platform \
-    libqcodec2_utils \
-    libqcodec2_v4l2codec \
     libqcrilDataModule \
     libqcrilNr \
     libqcrilNrCellInfoModule \
@@ -1191,9 +1146,6 @@ PRODUCT_PACKAGES += \
     libqcrildataaidl \
     libqcrildatactl \
     libqcrildataqos \
-    libqdcm-algo \
-    libqdcm-json-mode-parser \
-    libqdcm-mode-parser \
     libqdi \
     libqdpr \
     libqesdk \
@@ -1217,8 +1169,6 @@ PRODUCT_PACKAGES += \
     libqms_packetstats_sdk \
     libqms_sdf_sdk \
     libqrtr \
-    libqrtrclient \
-    libqseed3 \
     libqshcamera \
     libqsocket \
     libqtigefar \
@@ -1227,7 +1177,6 @@ PRODUCT_PACKAGES += \
     libqtivibratoreffect \
     libqwes \
     librcc \
-    librcmask \
     libremosaic_wrapper \
     libremosaiclib \
     libril-db \
@@ -1242,18 +1191,12 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation \
     libscveObjectTracker \
     libscveObjectTracker_stub \
-    libsdm-color \
-    libsdm-colormgr-algo \
-    libsdm-disp-vndapis \
-    libsdmextension \
     libsdsprpc \
     libsensor_calibration \
     libsensorslog \
     libsfeShiftExtrapolation \
     libshsc \
     libslimclient \
-    libsnapdragoncolor-manager \
-    libsnapdragoncolor-qdcm \
     libsns_api \
     libsns_device_mode_stub \
     libsns_direct_channel_stub-pong \
@@ -1280,21 +1223,16 @@ PRODUCT_PACKAGES += \
     libsys_info_cache \
     libsysmon_cdsp_skel \
     libsystem_health_mon2 \
-    libtestutils \
     libtfestriping \
     libthermalclient \
     libthreadutils \
     libtime_genoff \
-    libtinyxml2_1 \
     libtrustedapploader \
     libtzdrmgenprov \
     libubifocus \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1 \
     libvendorscenariopoweroptfeature \
     libvideoml \
-    libvideotxr \
-    libvideoutils \
-    libvmfilexfer \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \
@@ -1342,7 +1280,6 @@ PRODUCT_PACKAGES += \
     qcril_client \
     qcrild_libqcrilnr \
     qcrild_libqcrilnrutils \
-    qti.video.utils.videobufferlayout \
     qtiPeripheralMgr \
     qtiril-utils \
     qtiwakelock \
@@ -1400,7 +1337,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.minkipcbinder-V1-ndk_vendor \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk_vendor \
     vendor.qti.hardware.power.powermodule@1.0 \
-    vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom-V1-ndk \
     vendor.qti.hardware.radio.am-V1-ndk \
     vendor.qti.hardware.radio.am@1.0_vendor \
@@ -1594,8 +1530,6 @@ PRODUCT_PACKAGES += \
     bluetooth_hci.xml \
     bluetooth_sar.xml \
     bttpi-saidl.xml \
-    c2_manifest_vendor.xml \
-    c2_manifest_vendor_audio.xml \
     cacert-saidl.xml \
     datafactoryservice-saidl.xml \
     dpm-saidl.xml \
@@ -1647,13 +1581,10 @@ PRODUCT_PACKAGES += \
     vendor.noth.hardware.camera-service \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.hardware.capabilityconfigstore-service \
-    vendor.qti.hardware.display.color-service \
     vendor.qti.hardware.factory@1.0-service \
     vendor.qti.hardware.minkipcbinder@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.vibrator.service \
-    vendor.qti.media.c2@1.0-service \
-    vendor.qti.media.c2audio@1.0-service \
     ims-dataservice-daemon \
     ims_rtp_daemon \
     imsdaemon \
@@ -1672,9 +1603,7 @@ PRODUCT_PACKAGES += \
     pm-proxy \
     pm-service \
     port-bridge \
-    ppd \
     qcc-vendor \
-    qdcmss \
     qmipriod \
     qms \
     qrtr-cfg \
