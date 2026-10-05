@@ -28166,3 +28166,33 @@ install_symlink {
     installed_location: "lib64/libq3dtools_adreno.so",
     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
 }
+
+cc_prebuilt_binary {
+    name: "sltntc",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/sltntc",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libcrypto",
+                "libbinder",
+                "libutils",
+                "libhidlbase",
+                "libbase",
+                "android.hardware.health-V2-ndk",
+                "libbinder_ndk",
+            ],
+        },
+    },
+    compile_multilib: "first",
+    prefer: true,
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    system_ext_specific: true,
+}
