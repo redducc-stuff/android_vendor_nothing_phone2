@@ -188,6 +188,8 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/phone2/proprietary/vendor/etc/data/tlpd_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/tlpd_oem_config.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    vendor/nothing/phone2/proprietary/vendor/etc/dirac/dirac_resource.dar:$(TARGET_COPY_OUT_VENDOR)/etc/dirac/dirac_resource.dar \
+    vendor/nothing/phone2/proprietary/vendor/etc/dirac/interface.json:$(TARGET_COPY_OUT_VENDOR)/etc/dirac/interface.json \
     vendor/nothing/phone2/proprietary/vendor/etc/display/DPU8__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU8__.xml \
     vendor/nothing/phone2/proprietary/vendor/etc/display/qdcm_calib_data_nt37705_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_nt37705_amoled_fhd+_120hz_cmd_mode_dsi_visionox_panel.json \
     vendor/nothing/phone2/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
@@ -1005,6 +1007,7 @@ PRODUCT_PACKAGES += \
     libdepthcomputation \
     libdiag \
     libdiagjni \
+    libdirac \
     libdlrmsc \
     libdrmfs \
     libdrmtime \
@@ -1285,6 +1288,7 @@ PRODUCT_PACKAGES += \
     qtiril-utils \
     qtiwakelock \
     sensors.ssc \
+    libdiraceffect_NT \
     vendor.aac.hardware.richtap.vibrator-V1-ndk_platform \
     vendor.libdpmctmgr \
     vendor.libdpmfdmgr \
